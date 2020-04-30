@@ -1,0 +1,14 @@
+@import "_mixins/font-face";
+
+@include font-face("Comfortaa", "../assets/fonts/Comfortaa-Light/Comfortaa-Light", 200);
+@include font-face("Comfortaa", "../assets/fonts/Comfortaa/Comfortaa", 400);
+@include font-face("Comfortaa", "../assets/fonts/Comfortaa-Bold/Comfortaa-Bold", 700);
+
+@include font-face("Inter", "../assets/fonts/Inter-Light/Inter-Light", 200);
+
+@include font-face("Gilroy", "../assets/fonts/Gilroy-Thin/Gilroy-Thin", 100);
+@include font-face("Gilroy", "../assets/fonts/Gilroy-Light/Gilroy-Light", 200);
+@include font-face("Gilroy", "../assets/fonts/Gilroy-Regular/Gilroy-Regular", 400);
+@include font-face("Gilroy", "../assets/fonts/Gilroy-Bold/Gilroy-Bold", 700);
+
+@include font-face("OpenSans", "../fonts/OpenSansLight/OpenSansLight", 200);

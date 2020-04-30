@@ -1,0 +1,45 @@
+.header {
+    position: relative;
+    padding: 8px 0 18px;
+
+    &>.wrap {
+        display: flex;
+        align-items: center;
+    }
+    &__social {
+        font-size: 18px;
+        line-height: 26px;
+        margin-left: auto;
+        font-weight: 700;
+
+        a {
+            padding: 5px 0;
+            font-weight: 700;
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+        @media screen and (max-width: 820px) {
+            font-size: 14px;
+        }
+        @media screen and (max-width: 500px) {
+
+        }
+    }
+    .logo {
+        margin-top: 10px;
+        margin-left: -11px;
+        width: 180px;
+        img {
+            width: 100%;
+        }
+        @media screen and (max-width: 820px) {
+            max-width: 120px;
+            
+        }
+    }
+}
+
+
+
+//header

@@ -1,0 +1,195 @@
+
+@import "tools/_normalize.scss";
+@import "vars";
+@import "fonts";
+@import "libs";
+
+::placeholder {
+	color: #666;
+}
+
+::selection {
+	background-color: $accent;
+	color: #fff;
+}
+* {
+	box-sizing: border-box;
+}
+body {
+	min-width: 320px;
+	position: relative;
+	font-size: 16px;
+	line-height: 24px;
+	font-family: "Gilroy", Arial, Helvetica, sans-serif;
+	font-weight: 400;
+	overflow-x: hidden;
+	color: #202020;
+	input, textarea {
+		font-size: 16px;
+		font-weight: 200;
+		font-family: "Comfortaa", Arial, Helvetica, sans-serif;
+		width: 100%;
+		border: 1px solid #dddddd;
+		color: #676666;
+		outline: none;
+		background: #fff;
+		border-radius: 35px;
+		padding: 26px 28px;
+		&:focus:required:invalid {
+			border-color: red;
+		}
+		&:required:valid {
+			border-color: green;
+		}
+	}
+	label {
+		img {
+			width: 22px;
+			margin-right: 10px;
+		}
+
+	}
+}
+
+.img-responsive {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	&.img-width {
+		width: 100%;
+	}
+}
+
+.text-center {
+	text-align: center;
+}
+
+b, strong {
+	font-weight: bold;
+}
+.wrap {
+	max-width: 1170px;
+	padding: 0 15px;
+	margin: 0 auto;
+	@media screen and (max-width: 579px) {
+		padding: 0 15px;
+	}
+}
+a {
+	text-decoration: none;
+	color: $text;
+	transition: all.6s ease;
+	outline:none !important;
+	border: none;
+	&:hover {
+		outline:none;
+	};
+	&:active {
+		outline:none;
+		transition: all.1s ease;
+	};
+}
+ul,li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.primary-text {
+	font-weight: 200;
+	text-align: center;
+}
+.title {
+	font-weight: 700;
+	font-family: "Comfortaa", Arial, Helvetica, sans-serif;
+	font-size: 30px;
+	line-height: 40px;
+	text-align: center;
+	color: $accent;
+	@media screen and (max-width: 579px) {
+		font-size: 25px;
+		line-height: 1.2;
+	}
+	@media screen and (max-width: 419px) {
+		font-size: 20px;
+	}
+	&--white {
+		color: #f9f9f9;
+	}
+}
+.subtitle {
+	font-weight: 700;
+	font-family: "Comfortaa", Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	line-height: 45px;
+	text-align: center;
+	@media screen and (max-width: 880px) {
+
+	}
+	@media screen and (max-width: 579px) {
+
+	}
+}
+.btn {
+	position: relative;
+	display: inline-block;
+	font-size: 16px;
+	line-height: 1;
+	font-family: "Gilroy", Arial, Helvetica, sans-serif;
+	font-weight: 700;
+	color: #fff;
+	padding: 26px 28px;
+	margin-top: 25px;
+	transition: 0.5s;
+	cursor: pointer;
+	background: #76e370;
+	border: 1px solid #76e370;
+	min-width: 300px;
+	text-align: center;
+	border-radius: 35px;
+	@media screen and (max-width: 579px) {
+
+	}
+	.kviz__btn {
+		color: #fff;
+	}
+	&:hover {
+		background-color: #4fca48;
+		border-color: #4fca48;
+		.kviz__btn {
+			color: #fff;
+		}
+	}
+	&:active {
+		background-color: #4fca48;
+		border-color: #4fca48;
+	}
+	&--outline {
+		border-color: #fff;
+		color: #fff;
+		&:hover {
+			background-color: #fff;
+			color: #212121;
+		}
+		&:active {
+			background-color: #fff;
+			color: #c29566;
+		}
+	}
+}
+
+@import "sections/header";
+@import "sections/1home";
+@import "sections/2sections";
+@import "sections/3reasons";
+@import "sections/4sistem";
+@import "sections/5day";
+@import "sections/6source";
+@import "sections/7team";
+@import "sections/8reviews";
+@import "sections/9gallery";
+@import "sections/10schedule";
+@import "sections/11contact";
+@import "sections/modal";
+@import "sections/footer";
+
+@import "media"; // Always at the end
