@@ -1,12 +1,14 @@
 .header {
     position: relative;
     padding: 8px 0 18px;
-
+    font-family: "Comfortaa", Arial, Helvetica, sans-serif;
     &>.wrap {
         display: flex;
         align-items: center;
     }
     &__social {
+        display: flex;
+        align-items: center;
         font-size: 18px;
         line-height: 26px;
         margin-left: auto;
@@ -26,6 +28,25 @@
 
         }
     }
+    &__item {
+        display: flex;
+        align-items: center;
+        &+.header__item {
+            margin-left: 50px;
+        }
+    }
+    &__icon {
+        margin-right: 10px;
+        svg {
+        fill: $accent;
+        }
+    }
+    &__phone {
+        color: $accent;
+        font-size: 28px;
+        line-height: 35px;
+        font-weight: 700;
+    }
     .logo {
         margin-top: 10px;
         margin-left: -11px;
@@ -40,6 +61,13 @@
     }
 }
 
-
+.icon-map {
+    width: 22px;
+    height: 30px;
+}
+.icon-phone {
+    width: 27px;
+    height: 27px;
+}
 
 //header

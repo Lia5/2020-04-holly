@@ -1,7 +1,15 @@
 header.header
 	.wrap
 		.logo
-			img(src="img/logo.png", alt="logo Shostak")
+			img(src="img/logo.png", alt="logo")
 		.header__social
-			span.header__adress Київ. Бул. Кольцова, 14ж
-			a(href="tel:+380976506266" class="phone") +380 97 650 6266
+			.header__item
+				.header__icon
+					svg.icon.icon-map
+						use(xlink:href='img/icons/map.svg#map')
+				.header__adress Київ. Бул. Кольцова, 14ж
+			a(href="tel:+380442277234" class="phone header__item") 
+				.header__icon
+					svg.icon.icon-phone
+						use(xlink:href='img/icons/phone.svg#phone')
+				.header__phone +38 (044) 22-77-234

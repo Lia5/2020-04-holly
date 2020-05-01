@@ -150,6 +150,71 @@ $(function() {
         }
     });
 
+
+  //popup
+  if(jQuery('.modal__wrap').length) {
+    let modalWrap = $('.modal__wrap');
+    //popup
+    $(".modal-open").click(function (e){
+      e.preventDefault();
+      var btn = $(this);
+      var numModal = btn.attr('href');
+      if(numModal == '#modalQuiz'){
+
+        $('.qa-del-discount').css('display', 'block');
+      }
+      var modal =  $(numModal);
+    //   modalWrap.removeClass('fadeOutUp');
+    //   modalWrap.addClass('fadeInDown');
+      modalWrap.removeClass('animated zoomOut');
+      modalWrap.addClass('animated zoomIn');
+      modal.removeClass('disabled');
+      modal.addClass('flex');
+      $('body').addClass('body-modal-open');
+      // body.addClass('body-modal');
+
+    });
+    $('.modal-close').click(function (){
+        if ( window.innerWidth < 750 || window.screen.width < 750) {
+            $('.main-menu').removeClass('active');
+            $('.menu-toggle').removeClass('active');
+        }
+        // modalWrap.removeClass('fadeInDown');
+        // modalWrap.addClass('fadeOutUp');
+        modalWrap.removeClass('animated zoomIn');
+        modalWrap.addClass('animated zoomOut');
+        setTimeout(function() {
+            $('.modal').addClass('disabled');
+            }, 700);
+        setTimeout(function() {
+            $('.modal').removeClass('flex');
+            $('body').removeClass('body-modal-open');
+            }, 800);  
+    });
+    $('.modal').mouseup(function (e){ // событие клика по веб-документу
+      var div = $(".modal__body"); // тут указываем ID элемента
+      var close = $('.modal-close');
+      if (close.is(e.target)) {
+      } else if (!div.is(e.target) // если клик был не по нашему блоку
+      && div.has(e.target).length === 0) { // и не по его дочерним элементам
+            $('.main-menu').removeClass('active');
+            $('.menu-toggle').removeClass('active');
+            var modalWrap = $('.modal__wrap');
+            // modalWrap.removeClass('fadeInDown');
+            // modalWrap.addClass('fadeOutUp');
+            modalWrap.removeClass('animated zoomIn');
+            modalWrap.addClass('animated zoomOut');
+            setTimeout(function() {
+                $('.modal').addClass('disabled');
+            }, 700);
+            setTimeout(function() {
+                $('.modal').removeClass('flex');
+                $('body').removeClass('body-modal-open');
+            }, 800);
+      }
+    });
+}
+
     //kviz
     if(jQuery('.kviz').length) {
         $('.qa-next').click(function(e){
@@ -172,83 +237,48 @@ $(function() {
             $(this).parent().parent('.step-slide').removeClass('step-slide--active').prev().addClass('step-slide--active');
         });
     }
-
-    //popup
-    if(jQuery('.modal__wrap').length) {
-        let modalWrap = $('.modal__wrap');
-        
-        //popup
-        $(".modal-open").click(function (e){
-          e.preventDefault();
-          var btn = $(this);
-            $($(this).parent().parent()).each(function () {
-                var form = $(this);
-                form.find('.rfield').addClass('empty_field');
-
-                   // Функция проверки полей формы
-
-                    form.find('.rfield').each(function(){
-                    if($(this).val() != ''){
-                        // Если поле не пустое удаляем класс-указание
-                    $(this).removeClass('empty_field');
-
-                    if (!form.find('.empty_field').length) {
-                        var numModal = btn.attr('href');
-                        var modal =  $(numModal);
-                        modalWrap.removeClass('fadeOutUp');
-                        modalWrap.addClass('fadeInDown');
-                        modal.removeClass('disabled');
-                        modal.addClass('flex');
-                        $('body').addClass('body-modal-open');
-                        // body.addClass('body-modal');
-                        }
-                    } else {
-                        // Если поле пустое добавляем класс-указание
-                    $(this).addClass('empty_field');
-                    }
-                    });
-
-                
-
-
-            })
-            
-          
-        });
-      
-        $('.modal-close').click(function (){
-          modalWrap.removeClass('fadeInDown');
-          modalWrap.addClass('fadeOutUp');
-          setTimeout(function() {
-              $('.modal').addClass('disabled');
-            }, 700);
-          setTimeout(function() {
-              $('.modal').removeClass('flex');
-              $('body').removeClass('body-modal-open');
-            }, 800);  
-      
-        });
-        $('.modal').mouseup(function (e){ // событие клика по веб-документу
-          var div = $(".modal__body"); // тут указываем ID элемента
-          var close = $('.modal-close');
-          if (close.is(e.target)) {
-      
-          } else if (!div.is(e.target) // если клик был не по нашему блоку
-          && div.has(e.target).length === 0) { // и не по его дочерним элементам
-              var modalWrap = $('.modal__wrap');
-              modalWrap.removeClass('fadeInDown');
-              modalWrap.addClass('fadeOutUp');
-              setTimeout(function() {
-                  $('.modal').addClass('disabled');
-              }, 700);
-              setTimeout(function() {
-                  $('.modal').removeClass('flex');
-                  $('body').removeClass('body-modal-open');
-              }, 800); 
-            
-          }
-        });
+    // UTM
+    function getQueryVariable(variable) {
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i=0;i<vars.length;i++) {
+            var pair = vars[i].split("=");
+            if(pair[0] == variable){return pair[1];}
+        }
+        return(false);
     }
+
+    $('form').find('input.utm_source').each(function() {
+        var a = getQueryVariable('utm_source');
+        if(a){
+            $(this).val(a);
+        }
+    }); 
+    $('form').find('input.utm_medium').each(function() {
+        var a = getQueryVariable('utm_medium');
+        if(a){
+            $(this).val(a);
+        }
+    });
+    $('form').find('input.utm_campaign').each(function() {
+        var a = getQueryVariable('utm_campaign');
+        if(a){
+            $(this).val(a);
+        }
+    });
+    $('form').find('input.utm_term').each(function() {
+        var a = getQueryVariable('utm_term');
+        if(a){
+            $(this).val(a);
+        }
+    });
+    $('form').find('input.utm_content').each(function() {
+        var a = getQueryVariable('utm_content');
+        if(a){
+            $(this).val(a);
+        }
+    });
+  
     //scrollto
     
     if(jQuery('.scroll-to').length) {
@@ -269,41 +299,73 @@ $(function() {
         });
     }
 
-    //click on form submit button - AMO
-    $('.kviz__btn').on('click', function(){
-        $($(this).parent().parent()).each(function () {
-            var form = $(this);
-            form.find('.rfield').addClass('empty_field');
 
-                // Функция проверки полей формы
+        //click on form submit button - AMO
+            // form
+    $('form').submit(function() { 
+        var form = $(this);
+        var btn = $(this).find('.quiz__btn');
+        form.find('.rfield').addClass('empty_field');
 
-                form.find('.rfield').each(function(){
-                if($(this).val() != ''){
-                    // Если поле не пустое удаляем класс-указание
+        // Функция проверки полей формы
+
+        form.find('.rfield').each(function(){
+            if($(this).val() != ''){
+                // Если поле не пустое удаляем класс-указание
                 $(this).removeClass('empty_field');
 
-                if (!form.find('.empty_field').length) {
-                console.log('form');
-                form = $('.quizForm');
-                jQuery.ajax({
-                    method: "POST",
-                    data: form.serialize(),
-                    // url: quizAjax.url,
-                    url: '../sendamo.php',
-                    dataType: "json",
-                    success: function (json) {
-                        // if (json.success) {
-                            // jQuery(".wizard-section").fadeOut(100);
-                            window.location.href = "/quiz-thanks/";
-                        // }
-                    }
-                });
-                fbq('track', 'Lead');
-                }
+                if((form.attr("name") == "quiz") && form.find('.useful__input:checked').length) {
+                        
+                console.log('jr');
+                    
 
-                } else {}
-                });
-        })
+                    if (!form.find('.empty_field').length) {
+                        if(form.attr("name") == "podderjka"){
+                            ym(62113519,'reachGoal','callback');
+                        }
+                        if(form.attr("name") == "quiz"){
+                            ym(62113519,'reachGoal','order'); 
+                        }
+                        $.ajax({
+                            type: "POST",
+                            url: "../sendamo.php", //Change
+                            data: form.serialize()
+                        }).done(function() {
+                            var numModal = form.find('.btn-finish').attr('data-modal');
+                            var modal =  $(numModal);
+                            var modalWrap = $('.modal__wrap');
+                            // modalWrap.removeClass('fadeOutUp');
+                            // modalWrap.addClass('fadeInDown');
+                            modalWrap.removeClass('animated zoomOut');
+                            modalWrap.addClass('animated zoomIn');
+                            $('.modal').addClass('disabled');
+                            modal.removeClass('disabled');
+                            modal.addClass('flex');
+                            $('body').addClass('body-modal-open');
+                            setTimeout(function() {
+                                // Done Functions
+                                // form.trigger("reset");
+                            }, 1000);
+
+                            fbq('track', 'Lead');
+                            btn.attr('href', "#").removeClass('quiz__btn').css('pointer-events', 'none');
+                            btn.parent().css('opacity', '0.5').css('pointer-events', 'none');
+ 
+                        });
+
+                        // $.ajax({
+                        //     method: "POST",
+                        //     url: "../telegram.php", //Change
+                        //     data: form.serialize()
+                        // }).done(function(){});
+                    }
+
+            } else {
+                $('.useful__label').css('border-color', 'red');
+            }
+            } else {}
+        });
+		return false;
     });
 
 

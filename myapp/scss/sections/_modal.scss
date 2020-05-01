@@ -247,47 +247,8 @@
       }
     }
   }
-  #packagesOwner,
-  #packageskouch {
-    .close {
-      svg {
-        @media only screen and (max-width: 1045px) {
-          fill: #fff;
-        }
-      }
-    }
-  }
-.packagesForm {
-  .modal__wrap {
-    width: 100%;
-    max-width: 613px;
-    text-align: center;
-  }
-  .form-line {
-    display: block;
-    label {
-      display: block;
-      margin-bottom: 22px;
-      &+label {
-        margin-left: 0;
-      }
-    }
-  }
-  input {
-    min-width: 350px;
-    border: 1px solid #d1d1d1;
-  }
-  .form-line-wrap {
-    justify-content: center;
-  }
-  .modal__body {
-    padding: 75px 20px;
-  }
 
-  input.empty_field {
-    border: 1px solid red;
-  }
-}
+
 #policy {
   .modal__mainsubtitle {
     margin-bottom: 20px;

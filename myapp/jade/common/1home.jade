@@ -14,8 +14,12 @@ section.home
                 .form.home__form
                     .form-line 
                         label
-                            span телефон
-                            input(type="text" placeholder="+38 (093) 333 33 33" name="phone" required).rfield.phone-mask
-                    button.home__btn.btn-finish(type="submit")
-                        a(href="#modalConsult").btn.kviz__btn Получить консультацию
+                            input(type="text" placeholder="+38" name="phone" required).rfield.phone-mask
+                    .form-line-btn
+                        .btn-finish(data-modal="#modalFinish")
+                            input(type="submit" value="Записатися на пробне заняття").quiz__btn.btn
+                .agree-line
+                    input#modal__agree(type='checkbox', checked='', disabled='')
+                    label(for='#modal__agree') Я згоден на 
+                        a(href="#policy").agree-line__policy.modal-open обробку персональних даних 
         .home__pic

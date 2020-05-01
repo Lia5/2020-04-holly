@@ -14,8 +14,23 @@
   <body>
     <header class="header">
       <div class="wrap">
-        <div class="logo"><img src="img/logo.png" alt="logo Shostak"></div>
-        <div class="header__social"><span class="header__adress">Київ. Бул. Кольцова, 14ж</span><a href="tel:+380976506266" class="phone">+380 97 650 6266</a></div>
+        <div class="logo"><img src="img/logo.png" alt="logo"></div>
+        <div class="header__social">
+          <div class="header__item">
+            <div class="header__icon">
+              <svg class="icon icon-map">
+                <use xlink:href="img/icons/map.svg#map"></use>
+              </svg>
+            </div>
+            <div class="header__adress">Київ. Бул. Кольцова, 14ж</div>
+          </div><a href="tel:+380442277234" class="phone header__item"> 
+            <div class="header__icon">
+              <svg class="icon icon-phone">
+                <use xlink:href="img/icons/phone.svg#phone"></use>
+              </svg>
+            </div>
+            <div class="header__phone">+38 (044) 22-77-234</div></a>
+        </div>
       </div>
     </header>
     <section class="home">
@@ -33,11 +48,19 @@
             <input type="hidden" name="info" value="1й экран - консультация">
             <div class="form home__form">
               <div class="form-line"> 
-                <label><span>телефон</span>
-                  <input type="text" placeholder="+38 (093) 333 33 33" name="phone" required class="rfield phone-mask">
+                <label>
+                  <input type="text" placeholder="+38" name="phone" required class="rfield phone-mask">
                 </label>
               </div>
-              <button type="submit" class="home__btn btn-finish"><a href="#modalConsult" class="btn kviz__btn">Получить консультацию</a></button>
+              <div class="form-line-btn">
+                <div data-modal="#modalFinish" class="btn-finish">
+                  <input type="submit" value="Записатися на пробне заняття" class="quiz__btn btn">
+                </div>
+              </div>
+            </div>
+            <div class="agree-line">
+              <input id="modal__agree" type="checkbox" checked="" disabled="">
+              <label for="#modal__agree">Я згоден на <a href="#policy" class="agree-line__policy modal-open">обробку персональних даних </a></label>
             </div>
           </form>
         </div>
