@@ -1,0 +1,43 @@
+.sistem {
+    background: $accent;
+    background: url('../img/sistem-bg.png') no-repeat;
+    &__title {
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    &__body {
+        display: flex;
+    }
+    &__name {
+        color: #fff;
+        font-size: 30px;
+        line-height: 40px;
+        font-weight: 700;
+        font-family: "Comfortaa", Arial, Helvetica, sans-serif;
+        text-align: left;
+    }
+    &__pic {
+        position: relative;
+        z-index: 1;
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: 0px;
+            left: 0;
+            width: 459px;
+            height: 591px;
+            background: url('../img/sistem-bg-boy.png') no-repeat;
+            z-index: -1;
+        }
+    }
+}
+.icon-trophy {
+    width: 60px;
+    height: 65px;
+}
+.icon-speak {
+    
+    width: 135px;
+    height: 122px;
+}

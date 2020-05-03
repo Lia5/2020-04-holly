@@ -1,0 +1,61 @@
+.reasons {
+    &__items {
+        text-align: center;
+        justify-content: center;
+    }
+    &__item {
+        margin: 0 15px;
+        width: 30%;
+        width: calc(100% / 3 - 30px);
+        padding: 10px;
+        background-image: url('img/reason1.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        &:nth-child(1) {
+            .reasons__pic {
+                background-image: url('../img/reason1.png');
+            }
+        }
+        &:nth-child(2) {
+            .reasons__pic {
+                background-image: url('../img/reason2.png');
+            }
+        }
+        &:nth-child(3) {
+            .reasons__pic {
+                background-image: url('../img/reason3.png');
+            }
+        }
+        &:nth-child(4) {
+            .reasons__pic {
+                background-image: url('../img/reason4.png');
+            }
+        }
+        &:nth-child(5) {
+            .reasons__pic {
+                background-image: url('../img/reason5.png');
+            }
+        }
+    }
+    &__name {
+        font-family: "Comfortaa", Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        line-height: 25px;
+        font-weight: 700;
+    }
+    &__text {
+        font-weight: 200;
+    }
+    &__pic {
+        padding: 25px 0;
+        background-image: url('../img/reason1.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+    .icon {
+        width: 64px;
+        height: 64px;
+        fill: #fff;
+    }
+}
