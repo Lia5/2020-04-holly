@@ -1,0 +1,38 @@
+.day {
+    &__items {
+        justify-content: space-between;
+    }
+    &__item {
+        position: relative;
+        margin: 0 15px;
+        width: 30%;
+        width: calc(100% / 3 - 30px);
+        padding: 10px;
+        text-align: center;
+        max-width: 278px;
+        &:before, &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+            z-index: -1;
+        }
+        &:before {
+            background: #ffc145;
+        }
+        &:after {
+            background: #ffea91;
+            transform: rotate(5deg);
+        }
+    }
+    .icon {
+        width: 64px;
+        height: 64px;
+    }
+    &__btn {
+        text-align: center;
+    }
+}

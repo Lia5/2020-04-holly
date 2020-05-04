@@ -62,11 +62,8 @@ document.addEventListener('DOMContentLoaded', function(){
 			myContentPanes[i].classList.remove("active");
 		}
         var anchorReference = tabClickEvent.target;
-        console.log(anchorReference);
         var activePaneId = anchorReference.getAttribute("href");
-        console.log(activePaneId);
         var activePane = document.querySelector(activePaneId);
-        console.log(activePaneId);
 		activePane.classList.add("active");
     }
     for (i = 0; i < myTabs.length; i++) {
@@ -100,56 +97,107 @@ $(function() {
             }
         });
     }
-    $('.stations__slider').on('initialized.owl.carousel changed.owl.carousel', function (e) {
-        if (!e.namespace) {
-            return;
-        }
-        let carousel = e.relatedTarget;
-        $('.slider-counter').text(carousel.relative(carousel.current()) + 1 + '/' + carousel.items().length);
-        $('.stations__item').removeClass('active');
-    }).owlCarousel({
-        loop: false,
-        dots: false,
-        margin: 10,
-        nav: true,
-        navText: ['<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve"><metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata><g><g transform="matrix(1 0 0 -1 0 1008)"><path d="M756.2,741.8L990,508L756.2,274.2l-27,27L918.1,490H10v36h908.1L729.3,714.8L756.2,741.8z"/></g></g></svg>', '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve"><metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata><g><g transform="matrix(1 0 0 -1 0 1008)"><path d="M756.2,741.8L990,508L756.2,274.2l-27,27L918.1,490H10v36h908.1L729.3,714.8L756.2,741.8z"/></g></g></svg>'],
-        responsive: {
-            0: {
-                items: 1
-            },
-            768: {
-                items: 1
-            },
-            1000: {
-                items: 1
-            }
-        }
-    });
-    $('.reviews__slider').on('initialized.owl.carousel changed.owl.carousel', function (e) {
-        if (!e.namespace) {
-            return;
-        }
-        let carousel = e.relatedTarget;
-        $('.slider-counter--reviews').text(carousel.relative(carousel.current()) + 1 + '/' + carousel.items().length);
-    }).owlCarousel({
-        loop: false,
-        dots: false,
-        margin: 10,
-        nav: true,
-        navText: ['<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve"><metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata><g><g transform="matrix(1 0 0 -1 0 1008)"><path d="M756.2,741.8L990,508L756.2,274.2l-27,27L918.1,490H10v36h908.1L729.3,714.8L756.2,741.8z"/></g></g></svg>', '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve"><metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata><g><g transform="matrix(1 0 0 -1 0 1008)"><path d="M756.2,741.8L990,508L756.2,274.2l-27,27L918.1,490H10v36h908.1L729.3,714.8L756.2,741.8z"/></g></g></svg>'],
-        responsive: {
-            0: {
-                items: 1
-            },
-            768: {
-                items: 1
-            },
-            1000: {
-                items: 1
-            }
-        }
-    });
+    // $('.stations__slider').on('initialized.owl.carousel changed.owl.carousel', function (e) {
+    //     if (!e.namespace) {
+    //         return;
+    //     }
+    //     let carousel = e.relatedTarget;
+    //     $('.slider-counter').text(carousel.relative(carousel.current()) + 1 + '/' + carousel.items().length);
+    //     $('.stations__item').removeClass('active');
+    // }).owlCarousel({
+    //     loop: false,
+    //     dots: false,
+    //     margin: 10,
+    //     nav: true,
+    //     navText: ['<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve"><metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata><g><g transform="matrix(1 0 0 -1 0 1008)"><path d="M756.2,741.8L990,508L756.2,274.2l-27,27L918.1,490H10v36h908.1L729.3,714.8L756.2,741.8z"/></g></g></svg>', '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve"><metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata><g><g transform="matrix(1 0 0 -1 0 1008)"><path d="M756.2,741.8L990,508L756.2,274.2l-27,27L918.1,490H10v36h908.1L729.3,714.8L756.2,741.8z"/></g></g></svg>'],
+    //     responsive: {
+    //         0: {
+    //             items: 1
+    //         },
+    //         768: {
+    //             items: 1
+    //         },
+    //         1000: {
+    //             items: 1
+    //         }
+    //     }
+    // });
+    // $('.reviews__slider').on('initialized.owl.carousel changed.owl.carousel', function (e) {
+    //     if (!e.namespace) {
+    //         return;
+    //     }
+    //     let carousel = e.relatedTarget;
+    //     $('.slider-counter--reviews').text(carousel.relative(carousel.current()) + 1 + '/' + carousel.items().length);
+    // }).owlCarousel({
+    //     loop: false,
+    //     dots: false,
+    //     margin: 10,
+    //     nav: true,
+    //     navText: ['<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve"><metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata><g><g transform="matrix(1 0 0 -1 0 1008)"><path d="M756.2,741.8L990,508L756.2,274.2l-27,27L918.1,490H10v36h908.1L729.3,714.8L756.2,741.8z"/></g></g></svg>', '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve"><metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata><g><g transform="matrix(1 0 0 -1 0 1008)"><path d="M756.2,741.8L990,508L756.2,274.2l-27,27L918.1,490H10v36h908.1L729.3,714.8L756.2,741.8z"/></g></g></svg>'],
+    //     responsive: {
+    //         0: {
+    //             items: 1
+    //         },
+    //         768: {
+    //             items: 1
+    //         },
+    //         1000: {
+    //             items: 1
+    //         }
+    //     }
+    // });
 
+    //start note slider
+    if(jQuery('.rev_slider').length) {
+        var rev = $('.rev_slider');
+        rev.on('init', function(event, slick, currentSlide) {
+        var
+            cur = $(slick.$slides[slick.currentSlide]),
+            next = cur.next(),
+            prev = cur.prev();
+        prev.addClass('slick-sprev');
+        next.addClass('slick-snext');
+        cur.removeClass('slick-snext').removeClass('slick-sprev');
+        slick.$prev = prev;
+        slick.$next = next;
+        }).on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+        // console.log('beforeChange');
+        var
+            cur = $(slick.$slides[nextSlide]);
+        // console.log(slick.$prev, slick.$next);
+        slick.$prev.removeClass('slick-sprev');
+        slick.$next.removeClass('slick-snext');
+        next = cur.next(),
+            prev = cur.prev();
+        prev.prev();
+        prev.next();
+        prev.addClass('slick-sprev');
+        next.addClass('slick-snext');
+        slick.$prev = prev;
+        slick.$next = next;
+        cur.removeClass('slick-next').removeClass('slick-sprev');
+        });
+        
+        rev.slick({
+        speed: 1000,
+        arrows: true,
+        dots: false,
+        focusOnSelect: true,
+        // prevArrow: '<button> prev</button>',
+        // nextArrow: '<button> next</button>',
+        infinite: true,
+        centerMode: true,
+        slidesPerRow: 1,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        centerPadding: '0',
+        swipe: true,
+        customPaging: function(slider, i) {
+            return '';
+        },
+        });
+    }
+//end note slider        
 
   //popup
   if(jQuery('.modal__wrap').length) {
