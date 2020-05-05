@@ -120,5 +120,10 @@
         border: 1px solid #e8e8e8;
     }
   }
-
+  &__name {
+      font-weight: 700;
+  }
+  &__text {
+      font-weight: 200;
+  }
 }
