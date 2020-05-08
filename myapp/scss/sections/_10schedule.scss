@@ -1,0 +1,33 @@
+.schedule {
+    background: #ffea91;
+    background: url('../img/schedule-bg.png') no-repeat;
+    &__body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        &:after {
+            content: "";
+            position: absolute;
+            width: 189px;
+            height: 139px;
+            top: 0;
+            left: -189px;
+            background: url('../img/fly.png') no-repeat;
+        }
+        &:before {
+            content: "";
+            position: absolute;
+            width: 241px;
+            height: 77px;
+            top: 0;
+            left: -189px;
+            background: url('../img/frog.png') no-repeat;
+        }
+    }
+    &__text {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 30px;
+    }          
+}

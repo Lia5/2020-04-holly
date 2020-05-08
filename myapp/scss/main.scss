@@ -34,7 +34,7 @@ body {
 		outline: none;
 		background: #fff;
 		border-radius: 35px;
-		padding: 26px 28px;
+		padding: 22px 28px;
 		&:focus:required:invalid {
 			border-color: red;
 		}
@@ -173,19 +173,22 @@ h2.title {
 		background-color: #4fca48;
 		border-color: #4fca48;
 	}
-	&--outline {
-		border-color: #fff;
+	&--orange {
+		background: #ffc145;
+		border-color: #ffc145;
 		color: #fff;
-		&:hover {
-			background-color: #fff;
-			color: #212121;
-		}
-		&:active {
-			background-color: #fff;
-			color: #c29566;
+		&:hover, &:active {
+			background-color: #fb9720;
+			border-color:  #fb9720;
 		}
 	}
 }
+.tabs__content {
+	display: none; /* по умолчанию прячем все блоки */
+  }
+  .tabs__content.active {
+	display: block; /* по умолчанию показываем нужный блок */
+  }
 
 @import "sections/header";
 @import "sections/1home";

@@ -3,6 +3,20 @@
     .wrap {
         max-width: 857px;
     }
+    &__body {
+      position: relative;
+      padding-top: 79px;
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -50px;
+        width: 122px;
+        height: 94px;
+        background: url('../img/bird.png') no-repeat;
+        z-index: 1;
+      }
+    }
 // slider
   
   .slick-slider {
@@ -68,6 +82,18 @@
     transform: translate3d(-20%, 0, 0px);
   }
   .slick-arrow {
+    position: absolute;
+    width: 75px;
+    height: 100%;
+    z-index: 1;
+    top: 50%;
+    -webkit-transform: translate(0,-50%);
+    -ms-transform: translate(0,-50%);
+    transform: translate(0,-50%);
+    background: url(../img/icons/arrow.svg) no-repeat;
+    -webkit-background-size: 40% 40%;
+    background-size: 40%;
+    background-position: center;
       height: 70%;;
       border: none;
       font-size: 0;

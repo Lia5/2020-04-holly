@@ -1,0 +1,41 @@
+.team {
+    &__body {
+        display: flex;
+    }
+    &__wrap {
+        width: 40%;
+    }
+    &__position {
+        color: #ffc145;
+        font-size: 14px;
+        font-family: "Comfortaa", Arial, Helvetica, sans-serif;
+    }
+    .tabs {
+        display: flex;
+        &__caption {
+            width: 60%;
+            display: flex;
+            flex-wrap: wrap;
+            li {
+                width: 20%;
+                padding: 15px;
+                text-align: center;
+            }
+            .team__name {
+                font-size: 12px;
+                line-height: 14px;
+                color: #333333;
+                font-weight: 200;
+            }
+        }
+        &__content {
+
+            .team__name {
+                color: #ffc145;
+                font-size: 20px;
+                font-weight: 700;
+                font-family: "Comfortaa", Arial, Helvetica, sans-serif;
+            }
+        }
+    }
+}

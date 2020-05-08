@@ -32,8 +32,12 @@
         display: flex;
         align-items: center;
         &+.header__item {
-            margin-left: 50px;
+            margin-left: 40px;
         }
+    }
+    &__adress {
+        font-size: 16px;
+        line-height: 35px;
     }
     &__icon {
         margin-right: 10px;
@@ -48,9 +52,9 @@
         font-weight: 700;
     }
     .logo {
-        margin-top: 10px;
-        margin-left: -11px;
-        width: 180px;
+        margin-top: 4px;
+        margin-left: 0px;
+        width: 134px;
         img {
             width: 100%;
         }
@@ -62,8 +66,8 @@
 }
 
 .icon-map {
-    width: 22px;
-    height: 30px;
+    width: 30px;
+    height: 35px;
 }
 .icon-phone {
     width: 27px;

@@ -1,0 +1,46 @@
+.gallery {
+    overflow: hidden;
+    &__item {
+        max-width: 350px;
+        max-height: 360px;
+        border-radius: 10px;
+        overflow: hidden;
+        transform: scale(0.7);
+        transition: 0.3s;
+        img {
+            max-width: 100%;
+        }
+    }
+    .slick-list {
+        overflow: visible;
+    }
+    .slick-center {
+        .gallery__item {
+            transform: scale(1.2);
+        }
+    }
+    .slick-dots {
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+        button {
+            font-size: 0;
+            border: 0;
+            padding: 0;
+            width: 10px;
+            height: 10px;
+            background: #c6c6c6;
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+            &:hover {
+                background: #979696;
+            }
+        }
+        .slick-active {
+            button {
+                background: #ffc145;
+            }
+        }
+    }
+}

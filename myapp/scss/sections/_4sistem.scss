@@ -1,6 +1,7 @@
 .sistem {
     background: $accent;
     background: url('../img/sistem-bg.png') no-repeat;
+    overflow: hidden;
     &__title {
         max-width: 600px;
         margin-left: auto;
