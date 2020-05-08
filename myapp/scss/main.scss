@@ -153,7 +153,7 @@ h2.title {
 	cursor: pointer;
 	background: #76e370;
 	border: 1px solid #76e370;
-	min-width: 300px;
+	min-width: 250px;
 	text-align: center;
 	border-radius: 35px;
 	@media screen and (max-width: 579px) {
@@ -189,6 +189,39 @@ h2.title {
   .tabs__content.active {
 	display: block; /* по умолчанию показываем нужный блок */
   }
+//br 
+.br-desktop {
+	@media only screen and (max-width: 1350px) and (orientation: portrait),
+    screen and (max-width: 1080px) {
+		display: none;
+	}
+	@media screen and (max-width: 749px){
+		display: none;
+	}
+}
+.br-planshet {
+	display: none; 
+	@media only screen and (max-width: 1350px) and (orientation: portrait),
+    screen and (max-width: 1080px) {
+		display: inline;
+	}
+	@media screen and (max-width: 749px){
+		display: none;
+	}
+}
+.br-mobile-320 {
+	display: none;
+	@media screen and (max-width: 340px){
+		display: inline;
+	}
+}
+.br-mobile {
+	display: none;
+	@media screen and (max-width: 749px){
+		display: inline;
+	}
+}
+
 
 @import "sections/header";
 @import "sections/1home";

@@ -1,7 +1,22 @@
 .sistem {
+    position: relative;
     background: $accent;
     background: url('../img/sistem-bg.png') no-repeat;
+    background-size: 100% 100%;
     overflow: hidden;
+    padding: 251px 0 0;
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 6%;
+        width: 367px;
+        height: 215px;
+        background: url('../img/plane.png') no-repeat;
+    }
+    .title {
+        margin-bottom: 25px;
+    }
     &__title {
         max-width: 600px;
         margin-left: auto;
@@ -9,8 +24,10 @@
     }
     &__body {
         display: flex;
+        margin-top: 77px;
     }
     &__name {
+        margin-bottom: 5px;
         color: #fff;
         font-size: 30px;
         line-height: 40px;
@@ -21,24 +38,38 @@
     &__pic {
         position: relative;
         z-index: 1;
+        width: 17%;
         &:after {
             content: "";
             position: absolute;
             bottom: 0px;
-            left: 0;
-            width: 459px;
-            height: 591px;
+            left: -78%;
+            width: 633px;
+            height: 607px;
             background: url('../img/sistem-bg-boy.png') no-repeat;
             z-index: -1;
         }
+    }
+    &__items {
+        margin-top: 27px;
+        width: 33%;
+        padding-bottom: 176px;
+    }
+    &__item {
+        margin-bottom: 47px;
+    }
+    &__list {
+        width: 50%;
+        padding: 0 7%;
     }
 }
 .icon-trophy {
     width: 60px;
     height: 65px;
+    fill: #fff;
 }
 .icon-speak {
-    
-    width: 135px;
-    height: 122px;
+    width: 78px;
+    height: 77px;
+    fill: #fff;
 }

@@ -1,16 +1,17 @@
 .reviews {
+    padding: 163px 0 76px;
     background: url('../img/reviews-bg.png') no-repeat;
     .wrap {
-        max-width: 857px;
+        max-width: 770px;
     }
     &__body {
       position: relative;
-      padding-top: 79px;
+      padding-top: 50px;
       &:before {
         content: "";
         position: absolute;
-        top: 0;
-        left: -50px;
+        top: 18px;
+        left: -120px;
         width: 122px;
         height: 94px;
         background: url('../img/bird.png') no-repeat;
@@ -25,7 +26,7 @@
   }
   
   .slick-list {
-    padding-top: 0%!important;
+    padding-top: 70px!important;
     padding-bottom: 10%!important;
     padding-left: 15%!important;
     padding-right: 15%!important;
@@ -58,8 +59,8 @@
     transition: transform 1s, opacity 1s;
   }
   
-  .slick-snext,
-  .slick-sprev {
+  .slick-next,
+  .slick-prev {
     display: block;
   }
   
@@ -99,11 +100,11 @@
       font-size: 0;
       outline: none;
   }
-  .slick-prew {
-      left: 0;
+  .slick-prev {
+      left: -79px;
   }
   .slick-next {
-      right: 0;
+      right: -79px;
       transform: translate(0,-50%) rotate(180deg);
   }
   .slick-active .rev_slide {
@@ -111,7 +112,7 @@
       &:after {
           content: "";
           position: absolute;
-          top: -50px;
+          top: -60px;
           right: 0;
           width: 121px;
           height: 116px;
@@ -122,8 +123,10 @@
   &__item {
     position: relative;
     display: flex;
+    align-items: center;
     width: 100%;
-    padding: 0 73px;
+    padding: 53px 31px 30px 57px;
+    min-height: 290px;;
     position: relative;
     z-index: 1;
     &:before, &:after {
@@ -146,8 +149,16 @@
         border: 1px solid #e8e8e8;
     }
   }
+  &__header {
+    margin-right: 35px;
+  }
   &__name {
       font-weight: 700;
+      text-align: center;
+      font-family: "Comfortaa", Arial, Helvetica, sans-serif;
+  }
+  &__img {
+    margin-bottom: 20px;
   }
   &__text {
       font-weight: 200;

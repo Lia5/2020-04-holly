@@ -1,23 +1,31 @@
 .sections {
+    padding: 32px 0 50px;
     &__title {
         position: relative;
+        max-width: 760px;
+        margin-left: auto;
+        margin-right: auto;
         &:before {
             content: "";
             position: absolute;
-            top: -40px;
-            left: -40px;
+            top: -66px;
+            left: -93px;
             width: 392px;
             height: 211px;
             background: url('../img/cloud.png') no-repeat;
         }
     }
+    .container {
+        margin-top: 89px;
+    }
     &__item {
         margin: 0 15px;
         width: 30%;
         width: calc(100% / 3 - 30px);
-        padding: 10px;
+        padding: 0 29px 39px;
     }
     &__pic {
+        margin-bottom: 30px;
         img {
             max-width: 100%;
         }
@@ -29,6 +37,7 @@
         text-align: center;
     }
     &__btn {
+        margin-top: 35px;
         text-align: center;
     }
 }

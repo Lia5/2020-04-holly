@@ -187,8 +187,9 @@
         &:after {
             content: "";
             position: absolute;
-            top: 0;
-            left: 0;
+            top: -22px;
+            left: -39px;
+       
             width: 716px;
             height: 680px;
             background: url('../img/home-bg.png') no-repeat;

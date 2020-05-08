@@ -1,9 +1,10 @@
 .contact {
+    margin-top: 28px;
     color: #fff;
     background: #80e67e;
     background: url('../img/contact-bg.png') no-repeat;
     background-position: center;
-    padding: 105px 0 190px;
+    padding: 160px 0 190px;
 
     @media screen and (max-width: 1115px) {
         padding: 40px 0;
@@ -14,19 +15,30 @@
         &:before {
             content: "";
             position: absolute;
-            width: 55px;
-            height: 36px;
-            top: -20px;
-            right: 20px;
+            width: 43px;
+            height: 29px;
+            top: -14px;
+            right: 29px;
             background: url('../img/bug.png') no-repeat;
+            background-size: contain;
         }
+    }
+    .subtitle {
+        margin-bottom: 40px;
+    }
+    &__form {
+        max-width: 790px;
+        margin: 0 auto;
+        padding: 0 20px;
     }
     .btn-finish {
         text-align: center;
     }
     .btn {
+        min-width: auto;
         max-width: 197px;
-        margin: 0 auto;
+        margin: 0 auto 15px;
+        padding: 22px 28px;
     }
 }
 .agree-line {

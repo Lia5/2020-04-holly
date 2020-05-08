@@ -1,13 +1,17 @@
 .day {
+    padding: 148px 0;
+    .title {
+        margin-bottom: 95px;
+    }
     &__items {
         justify-content: space-between;
     }
     &__item {
         position: relative;
-        margin: 0 15px;
+        margin: 0 50px 67px;
         width: 30%;
-        width: calc(100% / 3 - 30px);
-        padding: 10px;
+        width: calc(100% / 3 - 100px);
+        padding: 40px 20px 20px;
         text-align: center;
         max-width: 278px;
         &:before, &:after {
@@ -29,10 +33,29 @@
         }
     }
     .icon {
-        width: 64px;
-        height: 64px;
+        width: 55px;
+        height: 60px;
     }
     &__btn {
         text-align: center;
+        margin-top: 28px;
+        .btn {
+            &:after {
+                content: "";
+                position: absolute;
+                width: 189px;
+                height: 139px;
+                bottom: -163px;
+                right: -129px;
+                transform: rotate(23deg);
+                background: url('../img/fly.png') no-repeat;
+            }
+        }
+    }
+    &__pic {
+        margin-bottom: 5px;
+    }
+    &__text {
+        font-weight: 200;
     }
 }

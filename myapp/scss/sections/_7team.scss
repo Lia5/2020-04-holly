@@ -1,4 +1,9 @@
 .team {
+    padding: 120px 0 40px;
+    .title {
+        max-width: 585px;
+        margin: 0 auto 60px;
+    }
     &__body {
         display: flex;
     }
@@ -7,8 +12,15 @@
     }
     &__position {
         color: #ffc145;
+        margin-bottom: 27px;
         font-size: 14px;
         font-family: "Comfortaa", Arial, Helvetica, sans-serif;
+    }
+    &__foto {
+        margin-bottom: 31px;
+        img {
+            max-width: 100%;
+        }
     }
     .tabs {
         display: flex;
@@ -29,7 +41,7 @@
             }
         }
         &__content {
-
+            padding-right: 24;
             .team__name {
                 color: #ffc145;
                 font-size: 20px;
