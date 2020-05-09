@@ -1,8 +1,18 @@
 .reviews {
     padding: 163px 0 76px;
     background: url('../img/reviews-bg.png') no-repeat;
+    @media screen and (max-width: 880px) {
+       background-size: cover;
+       padding-bottom: 176px;
+    }
     .wrap {
         max-width: 770px;
+        @media screen and (max-width: 1023px) {
+          max-width: 690px;
+        }
+        @media screen and (max-width: 880px) {
+            max-width: 82%;
+        }
     }
     &__body {
       position: relative;
@@ -16,6 +26,10 @@
         height: 94px;
         background: url('../img/bird.png') no-repeat;
         z-index: 1;
+        @media screen and (max-width: 880px) {
+            top: 15px;
+            left: -30px;
+        }
       }
     }
 // slider
@@ -88,24 +102,46 @@
     height: 100%;
     z-index: 1;
     top: 50%;
-    -webkit-transform: translate(0,-50%);
-    -ms-transform: translate(0,-50%);
     transform: translate(0,-50%);
     background: url(../img/icons/arrow.svg) no-repeat;
-    -webkit-background-size: 40% 40%;
     background-size: 40%;
     background-position: center;
-      height: 70%;;
-      border: none;
-      font-size: 0;
-      outline: none;
+    height: 70%;;
+    border: none;
+    font-size: 0;
+    outline: none;
+
+    @media screen and (max-width: 1023px) {
+      top: auto;
+      transform: none;
+      bottom: 0;
+      height: 50px;
+    }
+    @media screen and (max-width: 880px) {
+        bottom: -40px;
+    }
   }
   .slick-prev {
       left: -79px;
+      @media screen and (max-width: 1120px) {
+        left: -50px;
+      }
+      @media screen and (max-width: 1023px) {
+        left: auto;
+        right: 80px;
+      }
   }
   .slick-next {
       right: -79px;
       transform: translate(0,-50%) rotate(180deg);
+
+      @media screen and (max-width: 1120px) {
+        right: -50px;
+      }
+      @media screen and (max-width: 1023px) {
+        right: 0;
+      transform: translate(0,0) rotate(180deg);
+      }
   }
   .slick-active .rev_slide {
       position: relative;
@@ -118,6 +154,12 @@
           height: 116px;
           background: url('../img/icons/commas.png') no-repeat;
           z-index: 1;
+          @media screen and (max-width: 880px) {
+            width: 90px;
+            height: 90px;
+            top: -53px;
+            background-size: contain;
+          }
       }
   }
   &__item {
@@ -129,6 +171,13 @@
     min-height: 290px;;
     position: relative;
     z-index: 1;
+    @media screen and (max-width: 880px) {
+        display: block;
+        padding: 53px 25px 30px;
+    }
+    @media screen and (max-width: 500px) {
+      min-height: 420px;
+    }
     &:before, &:after {
         content: "";
         position: absolute;
@@ -159,8 +208,19 @@
   }
   &__img {
     margin-bottom: 20px;
+    img {
+
+      @media screen and (max-width: 880px) {
+        margin: 0 auto;
+    }
+    }
   }
   &__text {
       font-weight: 200;
+
+      @media screen and (max-width: 1023px) {
+        font-size: 14px;
+        line-height: 1.3;
+      }
   }
 }

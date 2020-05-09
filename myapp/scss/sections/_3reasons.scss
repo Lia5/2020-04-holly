@@ -1,5 +1,8 @@
 .reasons {
     padding: 102px 0 20px;
+    @media screen and (max-width: 880px) {
+        padding-top: 40px;
+    }
     .title {
         margin-bottom: 92px;
     }
@@ -15,6 +18,19 @@
         background-image: url('img/reason1.png');
         background-repeat: no-repeat;
         background-size: contain;
+        @media screen and (max-width: 1023px) {
+            margin: 0 10px;
+            width: calc(100% / 3 - 20px);
+            padding: 0 15px 20px;
+        }
+        @media screen and (max-width: 880px) {
+            width: calc(100% / 2 - 20px);
+        }
+        @media screen and (max-width: 500px) {
+            width: 100%;
+            margin-left: 0;
+            margin-right: 0;
+        }
         &:nth-child(1) {
             .reasons__pic {
                 background-image: url('../img/reason1.png');

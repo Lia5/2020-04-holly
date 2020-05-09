@@ -33,11 +33,21 @@
         align-items: center;
         &+.header__item {
             margin-left: 40px;
+            @media screen and (max-width: 880px) {
+                margin-left: 10px;
+            }
         }
     }
     &__adress {
         font-size: 16px;
         line-height: 35px;
+        @media screen and (max-width: 880px) {
+            font-size: 14px;
+            line-height: 18px;
+        }
+        @media screen and (max-width: 500px) {
+            text-align: right;
+        }
     }
     &__icon {
         margin-right: 10px;
@@ -50,6 +60,13 @@
         font-size: 28px;
         line-height: 35px;
         font-weight: 700;
+        @media screen and (max-width: 880px) {
+            font-size: 16px;
+            line-height: 20px;
+        }
+        @media screen and (max-width: 500px) {
+            display: none;
+        }
     }
     .logo {
         margin-top: 4px;
@@ -58,9 +75,8 @@
         img {
             width: 100%;
         }
-        @media screen and (max-width: 820px) {
-            max-width: 120px;
-            
+        @media screen and (max-width: 880px) {
+            max-width: 90px;
         }
     }
 }
@@ -68,10 +84,21 @@
 .icon-map {
     width: 30px;
     height: 35px;
+    @media screen and (max-width: 880px) {
+        width: 20px;
+        height: 25px;
+    }
+    @media screen and (max-width: 500px) {
+        display: none;
+    }
 }
 .icon-phone {
     width: 27px;
     height: 27px;
+    @media screen and (max-width: 880px) {
+        width: 17px;
+        height: 17px;
+    }
 }
 
 //header

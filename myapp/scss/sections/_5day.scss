@@ -1,10 +1,16 @@
 .day {
     padding: 148px 0;
+    @media screen and (max-width: 500px) {
+        padding: 50px 0;
+    }
     .title {
         margin-bottom: 95px;
     }
     &__items {
         justify-content: space-between;
+        @media screen and (max-width: 500px) {
+            justify-content: center;
+        }
     }
     &__item {
         position: relative;
@@ -14,6 +20,18 @@
         padding: 40px 20px 20px;
         text-align: center;
         max-width: 278px;
+        @media screen and (max-width: 1023px) {
+            margin: 0 25px 67px;
+            width: calc(100% / 3 - 50px);
+        }
+        @media screen and (max-width: 880px) {
+            width: calc(100% / 2 - 50px);
+        }
+        @media screen and (max-width: 500px) {
+            width: 100%;
+            margin-left: 0;
+            margin-right: 0;
+        }
         &:before, &:after {
             content: "";
             position: absolute;
@@ -49,6 +67,12 @@
                 right: -129px;
                 transform: rotate(23deg);
                 background: url('../img/fly.png') no-repeat;
+                @media screen and (max-width: 880px) {
+                    right: -29px;
+                }
+                @media screen and (max-width: 500px) {
+                     right: 24px;
+                }
             }
         }
     }

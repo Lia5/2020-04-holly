@@ -1,9 +1,16 @@
 .gallery {
     overflow: hidden;
     padding: 96px 0 76px;
+
+    @media screen and (max-width: 880px) {
+        padding-top: 0;
+    }
     .title {
         max-width: 760px;
         margin: 0 auto 150px;
+        @media screen and (max-width: 880px) {
+            margin-bottom: 40px;
+        }
     }
     &__item {
         max-width: 350px;
@@ -22,6 +29,9 @@
     .slick-center {
         .gallery__item {
             transform: scale(1.2);
+            @media screen and (max-width: 500px) {
+                transform: scale(1);
+            }
         }
     }
     .slick-dots {

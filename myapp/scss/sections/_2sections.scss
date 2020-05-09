@@ -13,19 +13,48 @@
             width: 392px;
             height: 211px;
             background: url('../img/cloud.png') no-repeat;
+            z-index: -1;
+
+            @media screen and (max-width: 500px) {
+               background-size: contain;
+               top: -46px;
+               left: -13px;
+               width: 220px;
+               height: 110px;
+            }
         }
     }
     .container {
         margin-top: 89px;
+        @media screen and (max-width: 500px) {
+            margin-top: 20px;
+        }
     }
     &__item {
         margin: 0 15px;
         width: 30%;
         width: calc(100% / 3 - 30px);
         padding: 0 29px 39px;
+        @media screen and (max-width: 1023px) {
+            margin: 0 5px;
+            width: calc(100% / 3 - 10px);
+            padding: 0 10px 39px;
+        }
+        @media screen and (max-width: 880px) {
+            width: calc(100% / 2 - 10px);
+        }
+        @media screen and (max-width: 500px) {
+            width: 100%;
+            margin-left: 0;
+            margin-right: 0;
+        }
     }
     &__pic {
         margin-bottom: 30px;
+
+        @media screen and (max-width: 500px) {
+            text-align: center;
+        }
         img {
             max-width: 100%;
         }

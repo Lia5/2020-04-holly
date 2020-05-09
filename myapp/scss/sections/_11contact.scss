@@ -6,8 +6,9 @@
     background-position: center;
     padding: 160px 0 190px;
 
-    @media screen and (max-width: 1115px) {
-        padding: 40px 0;
+    @media screen and (max-width: 880px) {
+        background-size: cover;
+        padding: 100px 0;
     }
 
     &__title {
@@ -93,15 +94,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media screen and (max-width: 500px) {
+        flex-wrap: wrap;
+    }
     label {
         width: 100%;
         margin-bottom: 24px;
     }
     label + label {
         margin-left: 10px;
-    }
-    @media screen and (max-width: 890px) {
-
+        @media screen and (max-width: 500px) {
+            margin-left: 0;
+        }
     }
 }
 

@@ -233,7 +233,7 @@ $(function() {
 
         //click on form submit button - AMO
             // form
-    $('form').click(function() { 
+    $('form').submit(function() { 
         var form = $(this);
         var btn = $(this).find('.quiz__btn');
         form.find('.rfield').addClass('empty_field');

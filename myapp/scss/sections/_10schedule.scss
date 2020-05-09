@@ -2,11 +2,19 @@
     padding: 113px 0 126px;
     background: #ffea91;
     background: url('../img/schedule-bg.png') no-repeat;
+    @media screen and (max-width: 880px) {
+        background-size: cover;
+        padding-bottom: 66px;
+    }
     &__body {
         display: flex;
         align-items: center;
         justify-content: space-around;
         position: relative;
+        @media screen and (max-width: 880px) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
         &:after {
             content: "";
             position: absolute;
@@ -33,8 +41,15 @@
         line-height: 30px;
         padding-left: 5%;
         font-family: "Comfortaa", Arial, Helvetica, sans-serif;
+        @media screen and (max-width: 880px) {
+            padding: 20px 0 20px 40px;
+            font-size: 16px;
+        }
     }
     &__btn {
         margin-right: 14%;
+        @media screen and (max-width: 1120px) {
+            margin-right: 0;
+        }
     }
 }

@@ -17,7 +17,7 @@
         max-width: 954px;
         position: relative;
         margin: auto;
-        @media only screen and (max-width: 620px) {
+        @media screen and (max-width: 620px) {
             max-width: 100%;
             width: 90%;
         }   
@@ -26,13 +26,6 @@
       position: relative;
       background: #fff;
       padding: 20px;
-
-      @media only screen and (max-width: 805px) {
-
-      }
-      @media only screen and (max-width: 500px) {
-
-      }
     }
     &__header {
       font-size: 35px;
@@ -69,11 +62,9 @@
       margin: 0 0 20px 0;
       text-align: left;
       color: #5f5f5f;
-      @media only screen and (max-width: 620px) {
+      @media screen and (max-width: 620px) {
         font-size: 11px;
         line-height: 16px;
-      }
-      @media only screen and (max-width: 368px) {
       }
     }
     &__list {
@@ -139,19 +130,6 @@
       &:hover {
           opacity: .7;
       }
-      @media only screen and (max-width: 1045px) {
-        top: 36px;
-        right: 17px;
-        border-color: #000;
-        svg {
-          fill: $accent;
-        }
-      }
-      @media only screen and (max-width: 620px) {
-        top: 26px;
-        right: 6px;
-      }
-  
   }
   
   .animated {
@@ -212,6 +190,13 @@
       padding: 90px 105px 40px;
       text-align: center;
       border-radius: 10px;
+
+      @media screen and (max-width: 620px) {
+        padding: 60px 7%
+      }
+      @media screen and (max-width: 360px) {
+        padding: 60px 2%
+      }
       &:before {
         content: "";
         position: absolute;
@@ -231,6 +216,9 @@
       input {
         font-size: 12px;
         padding: 17px 9px 17px 16px;
+        @media screen and (max-width: 620px) {
+          padding-left: 9px;
+        }
       }
       label {
         margin-bottom: 11px;
