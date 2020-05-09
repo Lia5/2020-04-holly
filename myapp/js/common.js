@@ -233,7 +233,7 @@ $(function() {
 
         //click on form submit button - AMO
             // form
-    $('form').submit(function() { 
+    $('form').click(function() { 
         var form = $(this);
         var btn = $(this).find('.quiz__btn');
         form.find('.rfield').addClass('empty_field');
@@ -245,18 +245,10 @@ $(function() {
                 // Если поле не пустое удаляем класс-указание
                 $(this).removeClass('empty_field');
 
-                if((form.attr("name") == "quiz") && form.find('.useful__input:checked').length) {
-                        
-                console.log('jr');
+                console.log(form);
                     
 
                     if (!form.find('.empty_field').length) {
-                        if(form.attr("name") == "podderjka"){
-                            ym(62113519,'reachGoal','callback');
-                        }
-                        if(form.attr("name") == "quiz"){
-                            ym(62113519,'reachGoal','order'); 
-                        }
                         $.ajax({
                             type: "POST",
                             url: "../sendamo.php", //Change
@@ -284,6 +276,29 @@ $(function() {
  
                         });
 
+                        //для проверки
+                            var numModal = form.find('.btn-finish').attr('data-modal');
+                            var modal =  $(numModal);
+                            var modalWrap = $('.modal__wrap');
+                            // modalWrap.removeClass('fadeOutUp');
+                            // modalWrap.addClass('fadeInDown');
+                            modalWrap.removeClass('animated zoomOut');
+                            modalWrap.addClass('animated zoomIn');
+                            $('.modal').addClass('disabled');
+                            modal.removeClass('disabled');
+                            modal.addClass('flex');
+                            $('body').addClass('body-modal-open');
+                            setTimeout(function() {
+                                // Done Functions
+                                // form.trigger("reset");
+                            }, 1000);
+
+                            fbq('track', 'Lead');
+                            btn.removeClass('quiz__btn').css('pointer-events', 'none');
+                            btn.css('opacity', '0.5');
+
+                        //конец проверки
+
                         // $.ajax({
                         //     method: "POST",
                         //     url: "../telegram.php", //Change
@@ -291,9 +306,7 @@ $(function() {
                         // }).done(function(){});
                     }
 
-            } else {
-                $('.useful__label').css('border-color', 'red');
-            }
+
             } else {}
         });
 		return false;

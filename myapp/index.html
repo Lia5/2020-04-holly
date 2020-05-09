@@ -39,7 +39,7 @@
           <div class="home__title">Холлі</div>
           <div class="home__subtitle">Дитячий Клуб </div>
           <div class="home__text">Простір, в якому ми допомагаємо батькам ростити розумних, міливих, щасливих та впевнених в собі дітей</div>
-          <form action="send.php" method="post">
+          <form>
             <input type="hidden" name="utm_source" class="utm_source hidden">
             <input type="hidden" name="utm_medium" class="utm_medium hidden">
             <input type="hidden" name="utm_campaign" class="utm_campaign hidden">
@@ -53,7 +53,7 @@
                 </label>
               </div>
               <div class="form-line-btn">
-                <div data-modal="#modalFinish" class="btn-finish">
+                <div data-modal="#modalForm" class="btn-finish">
                   <input type="submit" value="Записатися на пробне заняття" class="quiz__btn btn">
                 </div>
               </div>
@@ -780,10 +780,8 @@
                 </label>
               </div>
               <div class="form-line-btn">
-                <div data-modal="#modalFinish" class="btn btn-finish si-button-pulse">
-                  <div class="blick">
-                    <input type="submit" value="Записатися" class="quiz__btn btn btn--orange">
-                  </div>
+                <div data-modal="#modalFinish" class="btn-finish">
+                  <input type="submit" value="Записатися" class="quiz__btn btn btn--orange">
                 </div>
               </div>
             </div>
@@ -830,10 +828,8 @@
                 </label>
               </div>
               <div class="form-line-btn">
-                <div data-modal="#modalFinish" class="btn btn-finish si-button-pulse">
-                  <div class="blick">
-                    <input type="submit" value="Надіслати" class="quiz__btn btn btn--orange">
-                  </div>
+                <div data-modal="#modalFinish" class="btn-finish">
+                  <input type="submit" value="Надіслати" class="quiz__btn btn btn--orange">
                 </div>
               </div>
             </div>
@@ -858,7 +854,7 @@
         <div class="modal__body">
           <div class="modal__body-pic"></div>
           <div class="modal__title">Дякуємо!</div>
-          <div class="modal__subtitle">Адміністратор зв’яжеться з вами найближчим часом для запису на пробне заняття зі знижкою 50%</div>
+          <div class="modal__subtitle">Адміністратор зв’яжеться з вами<br> найближчим часом для запису <br>на пробне заняття зі знижкою 50%</div>
         </div>
       </div>
     </div>
@@ -875,7 +871,7 @@
         <div class="modal__body">
           <div class="modal__body-pic"></div>
           <div class="modal__title">Дякуємо!</div>
-          <div class="modal__subtitle">Адміністратор зв’яжеться з вами найближчим часом для запису на безкоштовне пробне заняття</div>
+          <div class="modal__subtitle">Адміністратор зв’яжеться з вами <br>найближчим часом для запису<br> на безкоштовне пробне заняття</div>
         </div>
       </div>
     </div>
@@ -892,11 +888,11 @@
         <div class="modal__body">
           <div class="modal__body-pic"></div>
           <div class="modal__title">Дякуємо!</div>
-          <div class="modal__subtitle">Адміністратор зв’яжеться з вами найближчим часом та відповість на всі запитання</div>
+          <div class="modal__subtitle">Адміністратор зв’яжеться з вами <br>найближчим часом та відповість <br>на всі запитання</div>
         </div>
       </div>
     </div>
-    <div id="modalPolicy" class="modal disabled">
+    <div id="modalPolicy" class="modal disabled1">
       <div class="modal__wrap animated fadeInDown">   
         <div class="close modal-close">
           <svg width="23px" height="23px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="t-popup__close-icon">

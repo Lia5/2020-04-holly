@@ -4,7 +4,7 @@ section.home
             .home__title Холлі
             .home__subtitle Дитячий Клуб 
             .home__text Простір, в якому ми допомагаємо батькам ростити розумних, міливих, щасливих та впевнених в собі дітей
-            form(action="send.php" method="post")
+            form
                 input.utm_source.hidden(type='hidden', name='utm_source')
                 input.utm_medium.hidden(type='hidden', name='utm_medium')
                 input.utm_campaign.hidden(type='hidden', name='utm_campaign')
@@ -16,7 +16,7 @@ section.home
                         label
                             input(type="text" placeholder="+38" name="phone" required).rfield.phone-mask
                     .form-line-btn
-                        .btn-finish(data-modal="#modalFinish")
+                        .btn-finish(data-modal="#modalForm")
                             input(type="submit" value="Записатися на пробне заняття").quiz__btn.btn
                     .agree-line
                         input#modal__agree(type='checkbox', checked='', disabled='')

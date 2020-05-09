@@ -50,7 +50,11 @@ body {
 
 	}
 }
-
+.body-modal-open {
+	height: 100vh;
+	overflow: hidden;
+	padding-right: 15px;
+}
 .img-responsive {
 	display: block;
 	max-width: 100%;

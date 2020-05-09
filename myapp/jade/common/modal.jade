@@ -25,9 +25,8 @@
                         label
                             input(type="text" placeholder="Вік дитини" name="age").rfield
                     .form-line-btn
-                        .btn.btn-finish(data-modal="#modalFinish").si-button-pulse
-                            .blick
-                                input(type="submit" value="Записатися").quiz__btn.btn.btn--orange 
+                        .btn-finish(data-modal="#modalFinish")
+                            input(type="submit" value="Записатися").quiz__btn.btn.btn--orange 
                 .agree-line
                     input#modal__agree(type='checkbox', checked='', disabled='')
                     label(for='#modal__agree') Я згоден на 
@@ -58,9 +57,8 @@
                         label
                             input(type="text" placeholder="Вік дитини" name="age").rfield
                     .form-line-btn
-                        .btn.btn-finish(data-modal="#modalFinish").si-button-pulse
-                            .blick
-                                input(type="submit" value="Надіслати").quiz__btn.btn.btn--orange 
+                        .btn-finish(data-modal="#modalFinish")
+                            input(type="submit" value="Надіслати").quiz__btn.btn.btn--orange 
                 .agree-line
                     input#modal__agree(type='checkbox', checked='', disabled='')
                     label(for='#modal__agree') Я згоден на 
@@ -75,7 +73,7 @@
         .modal__body
             .modal__body-pic
             .modal__title Дякуємо!
-            .modal__subtitle Адміністратор зв’яжеться з вами найближчим часом для запису на пробне заняття зі знижкою 50%
+            .modal__subtitle Адміністратор зв’яжеться з вами<br> найближчим часом для запису <br>на пробне заняття зі знижкою 50%
 #modalFinish2.modalFinish.modal.disabled
     .modal__wrap.animated.fadeInDown    
         .close.modal-close
@@ -86,7 +84,7 @@
         .modal__body
             .modal__body-pic
             .modal__title Дякуємо!
-            .modal__subtitle Адміністратор зв’яжеться з вами найближчим часом для запису на безкоштовне пробне заняття
+            .modal__subtitle Адміністратор зв’яжеться з вами <br>найближчим часом для запису<br> на безкоштовне пробне заняття
 #modalFinish3.modalFinish.modal.disabled
     .modal__wrap.animated.fadeInDown    
         .close.modal-close
@@ -97,8 +95,8 @@
         .modal__body
             .modal__body-pic
             .modal__title Дякуємо!
-            .modal__subtitle Адміністратор зв’яжеться з вами найближчим часом та відповість на всі запитання
-#modalPolicy.modal.disabled
+            .modal__subtitle Адміністратор зв’яжеться з вами <br>найближчим часом та відповість <br>на всі запитання
+#modalPolicy.modal.disabled1
     .modal__wrap.animated.fadeInDown    
         .close.modal-close
             svg.t-popup__close-icon(width='23px', height='23px', viewBox='0 0 23 23', version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
