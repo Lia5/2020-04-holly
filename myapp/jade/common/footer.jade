@@ -9,12 +9,14 @@ footer.footer
             .footer__adress
                 a(href="mailto:info@hollyclub.com.ua").footer__line 
                     span info@hollyclub.com.ua
-                    svg.icon
-                        use(xlink:href='img/icons/fb.svg#fb')
+                    a(href="https://www.facebook.com/hollyclubua")
+                        svg.icon
+                            use(xlink:href='img/icons/fb.svg#fb')
                 .footer__line 
                     span м. Київ, бул. Кольцова, 14ж
-                    svg.icon
-                        use(xlink:href='img/icons/instagram.svg#instagram')
+                    a(href="https://www.instagram.com/hollyclubkiev/?fbclid=IwAR3d9hnL3Q7SRCAia5hv_6HVusW1dgPXspd6YVfftMieGHDRAODArlcjwGw")
+                        svg.icon
+                            use(xlink:href='img/icons/instagram.svg#instagram')
             .footer__pic
                 img(src="img/hen.png", alt="hen")
     .footer__body
@@ -23,11 +25,11 @@ footer.footer
             .footer__menu
                 ul
                     li
-                        a(href="#") Політика конфіденційності
+                        a(href="#modalPolicy").modal-open Політика конфіденційності
                     li
                         a(href="#") Правила відвідування
                     li
-                        a(href="#") Договір публічної оферти
+                        a(href="files/offerta.pdf" target="_blank") Договір публічної оферти
             .footer__item.footer__dev 
                 span Розробка сайту
                 a(href="https://nox.agency/").footer__logo 
