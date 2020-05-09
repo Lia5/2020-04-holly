@@ -68,5 +68,10 @@
     &__btn {
         margin-top: 35px;
         text-align: center;
+        .btn {
+            max-width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
 }

@@ -10,9 +10,12 @@ var gulp          = require('gulp'),
 		rename        = require('gulp-rename'),
 		autoprefixer  = require('gulp-autoprefixer'),
 		notify        = require("gulp-notify"),
-		jade		  = require('gulp-jade');
+		jade		  = require('gulp-jade'),
 		// rsync         = require('gulp-rsync');
-
+		svgSprite = require('gulp-svg-sprites'),
+		svgmin = require('gulp-svgmin'),
+		cheerio = require('gulp-cheerio'),
+		replace = require('gulp-replace');
 gulp.task('browser-sync', function() {
 	browserSync({
 		server: {
@@ -61,20 +64,28 @@ gulp.task('jade', function() {
 		.pipe(browserSync.stream())
 });
 
-// gulp.task('rsync', function() {
-// 	return gulp.src('myapp/**')
-// 	.pipe(rsync({
-// 		root: 'myapp/',
-// 		hostname: 'username@yousite.com',
-// 		destination: 'yousite/public_html/',
-// 		// include: ['*.htaccess'], // Includes files to deploy
-// 		exclude: ['**/Thumbs.db', '**/*.DS_Store'], // Excludes files from deploy
-// 		recursive: true,
-// 		archive: true,
-// 		silent: false,
-// 		compress: true
-// 	}))
+
+// gulp.task('svgSpriteBuild', function () {
+//     return gulp.src('myapp/img/icons/*.svg') // svg files for sprite
+//         .pipe(svgSprite({
+//                 mode: {
+// 					symbol: {
+// 						sprite: "sprite.svg",
+// 						// render: {
+// 						//   scss: {
+// 						// 	dest:'../../../sass/_sprite.scss',
+// 						// 	template: assetsDir + "sass/templates/_sprite_template.scss"
+// 						//   }
+// 						// },
+// 						// example: true
+// 					  }
+//                 },
+//             }
+//         ))
+//         .pipe(gulp.dest('myapp/img/sprite'));
 // });
+
+
 
 gulp.task('watch', ['styles', 'js', 'jade', 'browser-sync'], function() {
 	gulp.watch('myapp/'+syntax+'/**/*.'+syntax+'', ['styles']);
