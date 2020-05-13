@@ -58,6 +58,7 @@
         text-align: center;
         margin-top: 28px;
         .btn {
+            display: inline-block;
             &:after {
                 content: "";
                 position: absolute;

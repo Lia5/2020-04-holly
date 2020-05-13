@@ -118,10 +118,10 @@ $(function() {
         $('.qa-del-discount').css('display', 'block');
       }
       var modal =  $(numModal);
-    //   modalWrap.removeClass('fadeOutUp');
-    //   modalWrap.addClass('fadeInDown');
-      modalWrap.removeClass('animated zoomOut');
-      modalWrap.addClass('animated zoomIn');
+      modalWrap.removeClass('fadeOutUp');
+      modalWrap.addClass('fadeInDown');
+    //   modalWrap.removeClass('animated zoomOut');
+    //   modalWrap.addClass('animated zoomIn');
       modal.removeClass('disabled');
       modal.addClass('flex');
       $('body').addClass('body-modal-open');
@@ -133,10 +133,10 @@ $(function() {
             $('.main-menu').removeClass('active');
             $('.menu-toggle').removeClass('active');
         }
-        // modalWrap.removeClass('fadeInDown');
-        // modalWrap.addClass('fadeOutUp');
-        modalWrap.removeClass('animated zoomIn');
-        modalWrap.addClass('animated zoomOut');
+        modalWrap.removeClass('fadeInDown');
+        modalWrap.addClass('fadeOutUp');
+        // modalWrap.removeClass('animated zoomIn');
+        // modalWrap.addClass('animated zoomOut');
         setTimeout(function() {
             $('.modal').addClass('disabled');
             }, 700);
@@ -154,10 +154,10 @@ $(function() {
             $('.main-menu').removeClass('active');
             $('.menu-toggle').removeClass('active');
             var modalWrap = $('.modal__wrap');
-            // modalWrap.removeClass('fadeInDown');
-            // modalWrap.addClass('fadeOutUp');
-            modalWrap.removeClass('animated zoomIn');
-            modalWrap.addClass('animated zoomOut');
+            modalWrap.removeClass('fadeInDown');
+            modalWrap.addClass('fadeOutUp');
+            // modalWrap.removeClass('animated zoomIn');
+            // modalWrap.addClass('animated zoomOut');
             setTimeout(function() {
                 $('.modal').addClass('disabled');
             }, 700);
@@ -251,16 +251,16 @@ $(function() {
                     if (!form.find('.empty_field').length) {
                         $.ajax({
                             type: "POST",
-                            url: "../sendamo.php", //Change
+                            url: "../send.php", //Change
                             data: form.serialize()
                         }).done(function() {
                             var numModal = form.find('.btn-finish').attr('data-modal');
                             var modal =  $(numModal);
                             var modalWrap = $('.modal__wrap');
-                            // modalWrap.removeClass('fadeOutUp');
-                            // modalWrap.addClass('fadeInDown');
-                            modalWrap.removeClass('animated zoomOut');
-                            modalWrap.addClass('animated zoomIn');
+                            modalWrap.removeClass('fadeOutUp');
+                            modalWrap.addClass('fadeInDown');
+                            // modalWrap.removeClass('animated zoomOut');
+                            // modalWrap.addClass('animated zoomIn');
                             $('.modal').addClass('disabled');
                             modal.removeClass('disabled');
                             modal.addClass('flex');
@@ -276,28 +276,6 @@ $(function() {
  
                         });
 
-                        //для проверки
-                            var numModal = form.find('.btn-finish').attr('data-modal');
-                            var modal =  $(numModal);
-                            var modalWrap = $('.modal__wrap');
-                            // modalWrap.removeClass('fadeOutUp');
-                            // modalWrap.addClass('fadeInDown');
-                            modalWrap.removeClass('animated zoomOut');
-                            modalWrap.addClass('animated zoomIn');
-                            $('.modal').addClass('disabled');
-                            modal.removeClass('disabled');
-                            modal.addClass('flex');
-                            $('body').addClass('body-modal-open');
-                            setTimeout(function() {
-                                // Done Functions
-                                // form.trigger("reset");
-                            }, 1000);
-
-                            fbq('track', 'Lead');
-                            btn.removeClass('quiz__btn').css('pointer-events', 'none');
-                            btn.css('opacity', '0.5');
-
-                        //конец проверки
 
                         // $.ajax({
                         //     method: "POST",

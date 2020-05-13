@@ -1,0 +1,39 @@
+.page-schedule {
+    background: url('../img/page-schedule-bg.jpg') no-repeat;
+    background-size: 100% 100%;
+    &__wrap {
+        padding-top: 120px;
+    }
+    .title {
+        color: #fff;
+    }
+    .subtitle {
+        font-size: 16px;
+        line-height: 24px;
+        max-width: 635px;
+        margin: 30px auto 70px;
+    }
+    &__body {
+        position: relative;
+        img {
+            width: 100%;
+        }
+        &:before {
+            content: "";
+            position: absolute;
+            width: 55px;
+            height: 36px;
+            top: -34px;
+            right: 81px;
+            background: url('../img/bug.png') no-repeat;
+            transform: scale(-1, 1)
+        }
+        
+    }
+    .footer__body {
+        padding-top: 130px;
+        background: url('../img/sche-bg.png') no-repeat;
+        background-size: cover;
+        background-position: top center;
+    }
+}
