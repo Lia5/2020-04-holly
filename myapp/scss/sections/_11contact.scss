@@ -41,6 +41,35 @@
         margin: 0 auto 15px;
         padding: 22px 28px;
     }
+    .form-line {
+        display: block;
+        label {
+            display: block;
+        }
+        @media screen and (max-width: 500px){
+            width: 100%;
+        }
+        &__wrap {
+            display: flex;
+        	@media screen and (max-width: 500px){
+                flex-wrap: wrap;
+            }
+        }
+        &+.form-line {
+            margin-left: 10px;
+            label {
+        	    // @media screen and (max-width: 500px){
+                //     margin-bottom: 34px;
+                // }
+            }
+        	@media screen and (max-width: 500px){
+                margin-left: 0;
+            }
+        }
+    }
+    .error-text {
+        bottom: 5px;
+    }
 }
 .agree-line {
     display: flex;
@@ -94,14 +123,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    
+    position: relative;
     
     @media screen and (max-width: 500px) {
         flex-wrap: wrap;
     }
     label {
         width: 100%;
-        margin-bottom: 24px;
+        margin-bottom: 34px;
     }
     label + label {
         margin-left: 10px;
@@ -109,9 +138,6 @@
             margin-left: 0;
         }
     }
-}
-.form-line-btn {
-    position: relative;
 }
 input.empty_field {
     border: 1px solid red;

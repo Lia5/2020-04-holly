@@ -16,16 +16,18 @@
                 input.utm_content.hidden(type='hidden', name='utm_content')
                 .form.step-slide__form
                     .form-line
+                        .error-text Поле "Ім’я дорослого" має бути заповнене!
                         label
                             input(type="text" placeholder="Ім’я дорослого відповідального за дитину" name="name").rfield
                     .form-line
+                        .error-text Поле "Телефон" має бути заповнене!
                         label
                             input(type="text" placeholder="Телефон" name="phone").rfield.phone-mask
                     .form-line
+                        .error-text Поле "Вік дитини" має бути заповнене!
                         label
                             input(type="number" placeholder="Вік дитини" name="age").rfield
                     .form-line-btn
-                        .error-text Заповніть всі поля!
                         .btn-finish(data-modal="#modalFinish")
                             input(type="submit" value="Записатися").quiz__btn.btn.btn--orange 
                         include send-preload
@@ -50,16 +52,18 @@
                 input.utm_content.hidden(type='hidden', name='utm_content')
                 .form.step-slide__form
                     .form-line
+                        .error-text Поле "Ім’я дорослого" має бути заповнене!
                         label
                             input(type="text" placeholder="Ім’я дорослого відповідального за дитину" name="name").rfield
                     .form-line
+                        .error-text Поле "Телефон" має бути заповнене!
                         label
                             input(type="text" placeholder="Телефон" name="phone").rfield.phone-mask
                     .form-line
+                        .error-text Поле "Вік дитини" має бути заповнене!
                         label
                             input(type="number" placeholder="Вік дитини" name="age").rfield
                     .form-line-btn
-                        .error-text Заповніть всі поля!
                         .btn-finish(data-modal="#modalFinish")
                             input(type="submit" value="Надіслати").quiz__btn.btn.btn--orange 
                         include send-preload

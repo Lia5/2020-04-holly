@@ -256,7 +256,7 @@ $(function() {
             if($(this).val() != ''){
                 // Если поле не пустое удаляем класс-указание
                 $(this).removeClass('empty_field');
-                form.find('.error-text').removeClass('active');
+                $(this).closest('.form-line').find('.error-text').removeClass('active');
                 console.log(form);
                     
 

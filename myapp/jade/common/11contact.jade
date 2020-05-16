@@ -12,13 +12,19 @@ section.contact#contact
                 input.utm_content.hidden(type='hidden', name='utm_content')
                 input(type='hidden', name='info', value='Останный экран - Залишились питання')
                 .form
-                    .form-line 
-                        label
-                            input(type="text" placeholder="Ім'я" name="name").rfield
-                        label
-                            input(type="text" placeholder="Телефон" name="phone").rfield.phone-mask
-                        label
-                            input(type="number" placeholder="Вік дитини" name="age").rfield
+                    .form-line__wrap
+                        .form-line 
+                            .error-text Поле "Ім’я" має бути заповнене!
+                            label
+                                input(type="text" placeholder="Ім'я" name="name").rfield
+                        .form-line
+                            .error-text Поле "Телефон" має бути заповнене!
+                            label
+                                input(type="text" placeholder="Телефон" name="phone").rfield.phone-mask
+                        .form-line 
+                            .error-text Поле "Вік дитини" має бути заповнене!
+                            label
+                                input(type="number" placeholder="Вік дитини" name="age").rfield
                     .form-line-btn
                         .error-text Заповніть всі поля!
                         .btn-finish(data-modal="#modalFinish")

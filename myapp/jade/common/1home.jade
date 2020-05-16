@@ -12,11 +12,12 @@ section.home
                 input.utm_content.hidden(type='hidden', name='utm_content')
                 input(type='hidden', name='info', value='1й экран - записатись на пробне заняття')
                 .form.home__form
-                    .form-line 
-                        label
-                            input(type="text" placeholder="+38" name="phone").rfield.phone-mask
+                    .home__form-wrap
+                        .form-line 
+                            .error-text Поле має бути заповнене!
+                            label
+                                input(type="text" placeholder="+38" name="phone").rfield.phone-mask
                         .form-line-btn
-                            .error-text Заповніть всі поля!
                             .btn-finish(data-modal="#modalFinish")
                                 input(type="submit" value="Записатися на пробне заняття").quiz__btn.btn
                             include send-preload

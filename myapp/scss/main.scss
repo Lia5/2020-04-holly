@@ -222,9 +222,10 @@ h2.title {
 	position: absolute;
 	width: 100%;
 	text-align: center;
-	top: -20px;
+	bottom: -20px;
 	font-size: 15px;
 	color: red;
+	white-space: nowrap;
 	&.active {
 		display: block;
 	}

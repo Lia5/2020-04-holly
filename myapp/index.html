@@ -68,12 +68,14 @@
             <input type="hidden" name="utm_content" class="utm_content hidden">
             <input type="hidden" name="info" value="1й экран - записатись на пробне заняття">
             <div class="form home__form">
-              <div class="form-line"> 
-                <label>
-                  <input type="text" placeholder="+38" name="phone" class="rfield phone-mask">
-                </label>
+              <div class="home__form-wrap">
+                <div class="form-line"> 
+                  <div class="error-text">Поле має бути заповнене!</div>
+                  <label>
+                    <input type="text" placeholder="+38" name="phone" class="rfield phone-mask">
+                  </label>
+                </div>
                 <div class="form-line-btn">
-                  <div class="error-text">Заповніть всі поля!</div>
                   <div data-modal="#modalFinish" class="btn-finish">
                     <input type="submit" value="Записатися на пробне заняття" class="quiz__btn btn">
                   </div>
@@ -733,16 +735,25 @@
             <input type="hidden" name="utm_content" class="utm_content hidden">
             <input type="hidden" name="info" value="Останный экран - Залишились питання">
             <div class="form">
-              <div class="form-line"> 
-                <label>
-                  <input type="text" placeholder="Ім'я" name="name" class="rfield">
-                </label>
-                <label>
-                  <input type="text" placeholder="Телефон" name="phone" class="rfield phone-mask">
-                </label>
-                <label>
-                  <input type="number" placeholder="Вік дитини" name="age" class="rfield">
-                </label>
+              <div class="form-line__wrap">
+                <div class="form-line"> 
+                  <div class="error-text">Поле "Ім’я" має бути заповнене!</div>
+                  <label>
+                    <input type="text" placeholder="Ім'я" name="name" class="rfield">
+                  </label>
+                </div>
+                <div class="form-line">
+                  <div class="error-text">Поле "Телефон" має бути заповнене!</div>
+                  <label>
+                    <input type="text" placeholder="Телефон" name="phone" class="rfield phone-mask">
+                  </label>
+                </div>
+                <div class="form-line"> 
+                  <div class="error-text">Поле "Вік дитини" має бути заповнене!</div>
+                  <label>
+                    <input type="number" placeholder="Вік дитини" name="age" class="rfield">
+                  </label>
+                </div>
               </div>
               <div class="form-line-btn">
                 <div class="error-text">Заповніть всі поля!</div>
@@ -828,22 +839,24 @@
             <input type="hidden" name="utm_content" class="utm_content hidden">
             <div class="form step-slide__form">
               <div class="form-line">
+                <div class="error-text">Поле "Ім’я дорослого" має бути заповнене!</div>
                 <label>
                   <input type="text" placeholder="Ім’я дорослого відповідального за дитину" name="name" class="rfield">
                 </label>
               </div>
               <div class="form-line">
+                <div class="error-text">Поле "Телефон" має бути заповнене!</div>
                 <label>
                   <input type="text" placeholder="Телефон" name="phone" class="rfield phone-mask">
                 </label>
               </div>
               <div class="form-line">
+                <div class="error-text">Поле "Вік дитини" має бути заповнене!</div>
                 <label>
                   <input type="number" placeholder="Вік дитини" name="age" class="rfield">
                 </label>
               </div>
               <div class="form-line-btn">
-                <div class="error-text">Заповніть всі поля!</div>
                 <div data-modal="#modalFinish" class="btn-finish">
                   <input type="submit" value="Записатися" class="quiz__btn btn btn--orange">
                 </div>
@@ -891,22 +904,24 @@
             <input type="hidden" name="utm_content" class="utm_content hidden">
             <div class="form step-slide__form">
               <div class="form-line">
+                <div class="error-text">Поле "Ім’я дорослого" має бути заповнене!</div>
                 <label>
                   <input type="text" placeholder="Ім’я дорослого відповідального за дитину" name="name" class="rfield">
                 </label>
               </div>
               <div class="form-line">
+                <div class="error-text">Поле "Телефон" має бути заповнене!</div>
                 <label>
                   <input type="text" placeholder="Телефон" name="phone" class="rfield phone-mask">
                 </label>
               </div>
               <div class="form-line">
+                <div class="error-text">Поле "Вік дитини" має бути заповнене!</div>
                 <label>
                   <input type="number" placeholder="Вік дитини" name="age" class="rfield">
                 </label>
               </div>
               <div class="form-line-btn">
-                <div class="error-text">Заповніть всі поля!</div>
                 <div data-modal="#modalFinish" class="btn-finish">
                   <input type="submit" value="Надіслати" class="quiz__btn btn btn--orange">
                 </div>
