@@ -217,7 +217,18 @@ h2.title {
 		display: inline;
 	}
 }
-
+.error-text {
+	display: none;
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	top: -20px;
+	font-size: 15px;
+	color: red;
+	&.active {
+		display: block;
+	}
+}
 
 @import "sections/header";
 @import "sections/1home";

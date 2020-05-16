@@ -110,7 +110,8 @@
         border: none;
         font-size: 0;
         outline: none;
-        bottom: -14px;
+        top: 28%;
+        transform: translate(0, -50%);
         height: 50px;
 
       }
@@ -119,6 +120,6 @@
       }
       .slick-next {
           right: 20px;
-          transform: rotate(180deg);
+          transform: translate(0, -50%) rotate(180deg);
       }
 }

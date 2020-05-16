@@ -14,8 +14,9 @@ section.home
                 .form.home__form
                     .form-line 
                         label
-                            input(type="text" placeholder="+38" name="phone" required).rfield.phone-mask
+                            input(type="text" placeholder="+38" name="phone").rfield.phone-mask
                         .form-line-btn
+                            .error-text Заповніть всі поля!
                             .btn-finish(data-modal="#modalFinish")
                                 input(type="submit" value="Записатися на пробне заняття").quiz__btn.btn
                             include send-preload

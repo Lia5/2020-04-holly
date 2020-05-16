@@ -1,5 +1,8 @@
 .team {
     padding: 120px 0 40px;
+    @media screen and (max-width: 500px) {
+        padding-top: 20px;
+    }
     .title {
         max-width: 585px;
         margin: 0 auto 60px;

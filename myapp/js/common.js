@@ -248,6 +248,7 @@ $(function() {
         var form = $(this);
         var btn = $(this).find('.quiz__btn');
         form.find('.rfield').addClass('empty_field');
+        form.find('.error-text').addClass('active');
 
         // Функция проверки полей формы
 
@@ -255,7 +256,7 @@ $(function() {
             if($(this).val() != ''){
                 // Если поле не пустое удаляем класс-указание
                 $(this).removeClass('empty_field');
-
+                form.find('.error-text').removeClass('active');
                 console.log(form);
                     
 
