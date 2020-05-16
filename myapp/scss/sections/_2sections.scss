@@ -57,6 +57,7 @@
         }
         img {
             max-width: 100%;
+            margin: auto;
         }
     }
     &__name {
@@ -74,4 +75,50 @@
             margin-right: auto;
         }
     }
+    .slick-dots {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        li {
+            &.slick-active {
+                button {
+                    background: #ffea91;
+                }
+            }
+        }
+        li+li {
+            margin-left: 5px;
+        }
+        button {
+            font-size: 0;
+            width: 16px;
+            height: 16px;
+            border-radius: 50px;
+            box-shadow: none;
+            border: none;
+            outline: none;
+        }
+    }
+    .slick-arrow {
+        position: absolute;
+        width: 75px;
+        z-index: 1;
+        background: url(../img/icons/arrow.svg) no-repeat;
+        background-size: 40%;
+        background-position: center;
+        height: 70%;;
+        border: none;
+        font-size: 0;
+        outline: none;
+        bottom: -14px;
+        height: 50px;
+
+      }
+      .slick-prev {
+          left: 20px;
+      }
+      .slick-next {
+          right: 20px;
+          transform: rotate(180deg);
+      }
 }

@@ -15,9 +15,10 @@ section.home
                     .form-line 
                         label
                             input(type="text" placeholder="+38" name="phone" required).rfield.phone-mask
-                    .form-line-btn
-                        .btn-finish(data-modal="#modalFinish")
-                            input(type="submit" value="Записатися на пробне заняття").quiz__btn.btn
+                        .form-line-btn
+                            .btn-finish(data-modal="#modalFinish")
+                                input(type="submit" value="Записатися на пробне заняття").quiz__btn.btn
+                            include send-preload
                     .agree-line
                         input#modal__agree(type='checkbox', checked='', disabled='')
                         label(for='#modal__agree') Я згоден на 

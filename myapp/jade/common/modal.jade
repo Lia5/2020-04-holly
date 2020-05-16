@@ -23,10 +23,11 @@
                             input(type="text" placeholder="Телефон" name="phone").rfield.phone-mask
                     .form-line
                         label
-                            input(type="text" placeholder="Вік дитини" name="age").rfield
+                            input(type="number" placeholder="Вік дитини" name="age").rfield
                     .form-line-btn
-                        .btn-finish(data-modal="#modalFinish2")
+                        .btn-finish(data-modal="#modalFinish")
                             input(type="submit" value="Записатися").quiz__btn.btn.btn--orange 
+                        include send-preload
                 .agree-line
                     input#modal__agree(type='checkbox', checked='', disabled='')
                     label(for='#modal__agree') Я згоден на 
@@ -55,10 +56,11 @@
                             input(type="text" placeholder="Телефон" name="phone").rfield.phone-mask
                     .form-line
                         label
-                            input(type="text" placeholder="Вік дитини" name="age").rfield
+                            input(type="number" placeholder="Вік дитини" name="age").rfield
                     .form-line-btn
                         .btn-finish(data-modal="#modalFinish")
                             input(type="submit" value="Надіслати").quiz__btn.btn.btn--orange 
+                        include send-preload
                 .agree-line
                     input#modal__agree(type='checkbox', checked='', disabled='')
                     label(for='#modal__agree') Я згоден на 
