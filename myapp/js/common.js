@@ -222,24 +222,24 @@ $(function() {
         });
     }
     //mob slider
-    if ( window.innerWidth < 881 || window.screen.width < 881) {
-        $('.sections__items').slick({
-            infinite: true,
-            slidesToShow: 2,
-            slidesToScroll: 2,
-            arrows: true,
-            dots: true,
-            responsive: [
-                {
-                  breakpoint: 500,
-                  settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                  }
-                }
-              ]
-          });
-    }
+    // if ( window.innerWidth < 881 || window.screen.width < 881) {
+    //     $('.sections__items').slick({
+    //         infinite: true,
+    //         slidesToShow: 2,
+    //         slidesToScroll: 2,
+    //         arrows: true,
+    //         dots: true,
+    //         responsive: [
+    //             {
+    //               breakpoint: 500,
+    //               settings: {
+    //                 slidesToShow: 1,
+    //                 slidesToScroll: 1
+    //               }
+    //             }
+    //           ]
+    //       });
+    // }
 
 
         //click on form submit button - AMO

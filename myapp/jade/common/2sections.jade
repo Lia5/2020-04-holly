@@ -1,43 +1,132 @@
 section.sections
     .wrap
-        h2.sections__title.title Клуб Холлі — це всі необхідні вашій дитині секції, студії та класи в одному місці
-        .container.sections__items
-            .sections__item
-                .sections__pic
-                    img(src="img/section1.png", alt="section")
-                .sections__name Розвиваючі заняття для різних <span class="br-desktop"><br></span>вікових груп від 9 місяців <span class="br-desktop"><br></span>до 4 років 
-            .sections__item
-                .sections__pic
-                    img(src="img/section2.png", alt="section")
-                .sections__name Підготовчий клас, після якого, <span class="br-desktop"><br></span> за словами батьків, успішно проходять співбесіди в школу 10 з 10 дітей 
-            .sections__item
-                .sections__pic
-                    img(src="img/section3.png", alt="section")
-                .sections__name Творчі студії, які розкривають <span class="br-desktop"><br></span>таланти дитини <span class="br-desktop"><br></span> до малювання і музики
-            .sections__item
-                .sections__pic
-                    img(src="img/section4.png", alt="section")
-                .sections__name Театральна студія, заняття в якій <span class="br-desktop"><br></span> допомагають говорити виразно, <span class="br-desktop"><br></span> та стати сміливішими навіть самим <span class="br-desktop"><br></span>сором'язливим
-            .sections__item
-                .sections__pic
-                    img(src="img/section5.png", alt="section")
-                .sections__name Клас англійської мови, який дає сильний фундамент для подальшого вивчення іноземних мов
-            .sections__item
-                .sections__pic
-                    img(src="img/section6.png", alt="section")
-                .sections__name Айкідо, капоейра і танці для фізичного розвитку та реалізації накопиченої енергії вашої маленької дзиґи
-            .sections__item
-                .sections__pic
-                    img(src="img/section7.png", alt="section")
-                .sections__name Ейдетика і ТРВЗ, які допомагають розвинути креативність, логічний аналіз, уважність, кмітливість  <br> і нестандартне мислення
-            .sections__item
-                .sections__pic
-                    img(src="img/section8.png", alt="section")
-                .sections__name Заняття з ментальної арифметики, мета яких розкрити в дитині його приховані здібності через розвиток правої півкулі мозку 
-            .sections__item
-                .sections__pic
-                    img(src="img/section9.png", alt="section")
-                .sections__name Lego-конструювання, яке проводиться за методикою, розробленою самим виробником в рамках освітнього проекту Lego Education
-        .sections__btn
-            a(href="#modalForm").btn.modal-open Записатися на пробне заняття
+        h2.sections__title.title Клуб Холлі — це всі необхідні вашій дитині секці<span class="letter-i">ї</span>, студі<span class="letter-i">ї</span> та класи в одному місці
+        .sections__items
+            .tabs
+                .sections__wrap
+                    .tabs__content.active
+                        .sections__foto
+                            img(src="img/section1.png", alt="section")
+                        .sections__text Розвиваючі заняття
+                        .team__about для різних вікових груп від 9 місяців до 4 років. Розроблена нами програма раннього розвитку дітей є цілісною та за відгуками батьків дає помітно високий результат.
+                        .sections__btn
+                            a(href="#modalForm-z1").btn.modal-open Записатися на пробне заняття
+                    .tabs__content
+                        .sections__foto
+                            img(src="img/section2.png", alt="section")
+                        .sections__text Підготовка до школи від 4 років 
+                        .team__about Курс розрахований на один чи два роки навчання, після якого, за словами батьків, успішно проходять співбесіди в школу 10 з 10 дітей
+                        .sections__btn
+                            a(href="#modalForm-z2").btn.modal-open Записатися на пробне заняття
+                    .tabs__content
+                        .sections__foto
+                            img(src="img/section5.png", alt="section")
+                        .sections__text Клас англійської мови,
+                        .team__about який дає міцний фундамент для подальшого вивчення іноземних мов. З дітьми за єдиною програмою працюють два педагога: україномовний викладач та носій мови
+                        .sections__btn
+                            a(href="#modalForm-z3").btn.modal-open Записатися на пробне заняття
+                    .tabs__content
+                        .sections__foto
+                            img(src="img/section7.png", alt="section")
+                        .sections__text Ейдетика і ТРВЗ,
+                        .team__about які допомагають розвинути пам'ять, уяву, креативність, увагу, логічний аналіз, кмітливість та нестандартне мислення.
+                        .sections__btn
+                            a(href="#modalForm-z4").btn.modal-open Записатися на пробне заняття
+                    .tabs__content
+                        .sections__foto
+                            img(src="img/section8.png", alt="section")
+                        .sections__text Ментальна арифметика
+                        .team__about Заняття з ментальної арифметики, сприяють розвитку обох півкуль мозку, розвивають пам'ять, спостережливість, аналітичне мислення та вчать обробляти великий об'єм інформації.
+                        .sections__btn
+                            a(href="#modalForm-z5").btn.modal-open Записатися на пробне заняття
+                    .tabs__content
+                        .sections__foto
+                            img(src="img/section6.png", alt="section")
+                        .sections__text Айкідо
+                        .team__about З Клубом Прикладного Айкідо "Лазар" ми співпрацюємо з 2013 року. За цей час ми спільно виховали декілька сотень сильних та впевнених у собі дітей, які можуть захистити себе у будь якій ситуації <a href="https://applied-aikido.com.ua/" target="_blank">https://applied-aikido.com.ua/</a>
+                        .sections__btn
+                            a(href="#modalForm-z6").btn.modal-open Записатися на пробне заняття
+                    .tabs__content
+                        .sections__foto
+                            img(src="img/section10.png", alt="section")
+                        .sections__text Сучасні танці 
+                        .team__about Программа Baby Dance для малят від 2,5 до 4 років. Партерна гімнастика та базові елементи різноманітних сучасних напрямків для дітей старше 4 років.
+                        .sections__btn
+                            a(href="#modalForm-z7").btn.modal-open Записатися на пробне заняття
+                    .tabs__content
+                        .sections__foto
+                            img(src="img/section11.png", alt="section")
+                        .sections__text Капоєйра
+                        .team__about Заняття проводить сертифікований інструктор Академії капоейри “Casa do Brasil” українського представництва міжнародної бразильскої школи капоейра “Cordao de ouro”
+                        .sections__btn
+                            a(href="#modalForm-z8").btn.modal-open Записатися на пробне заняття
+                    .tabs__content
+                        .sections__foto
+                            img(src="img/section9.png", alt="section")
+                        .sections__text Lego-конструювання
+                        .team__about Проводиться за методикою, розробленою самим виробником в рамках освітнього проекту Lego Education
+                        .sections__btn
+                            a(href="#modalForm-z9").btn.modal-open Записатися на пробне заняття
+                    .tabs__content
+                        .sections__foto
+                            img(src="img/section4.png", alt="section")
+                        .sections__text Театральна студія,
+                        .team__about заняття в якій допомагають говорити виразно, та стати сміливішими навіть самим сором'язливим
+                        .sections__btn
+                            a(href="#modalForm-z10").btn.modal-open Записатися на пробне заняття
+                    .tabs__content
+                        .sections__foto
+                            img(src="img/section3.png", alt="section")
+                        .sections__text Творчі студії,
+                        .team__about які розкривають таланти дитини до малювання і музики.
+                        .sections__btn
+                            a(href="#modalForm-z11").btn.modal-open Записатися на пробне заняття
+
+                .sections__caption
+                    ul.tabs__caption
+                        li.active 
+                            .sections__pic
+                                img(src="img/section1.png", alt="section")
+                            .sections__name Розвиваючі заняття
+                        li 
+                            .sections__pic
+                                img(src="img/section2.png", alt="section")
+                            .sections__name Підготовка до школи 
+                        li 
+                            .sections__pic
+                                img(src="img/section5.png", alt="section")
+                            .sections__name Англійська мова
+                        li 
+                            .sections__pic
+                                img(src="img/section7.png", alt="section")
+                            .sections__name Ейдетика і ТРВЗ
+                        li 
+                            .sections__pic
+                                img(src="img/section8.png", alt="section")
+                            .sections__name Ментальна арифметика
+                        li 
+                            .sections__pic
+                                img(src="img/section6.png", alt="section")
+                            .sections__name Айкідо
+                        li 
+                            .sections__pic
+                                img(src="img/section10.png", alt="section")
+                            .sections__name Сучасні танці 
+                        li 
+                            .sections__pic
+                                img(src="img/section11.png", alt="section")
+                            .sections__name Капоєйра
+                        li 
+                            .sections__pic
+                                img(src="img/section9.png", alt="section")
+                            .sections__name Lego-конструювання
+                        li 
+                            .sections__pic
+                                img(src="img/section4.png", alt="section")
+                            .sections__name Театральна студія
+                        li 
+                            .sections__pic
+                                img(src="img/section3.png", alt="section")
+                            .sections__name Творчі студії
+
             
